@@ -1,3 +1,22 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+.social-media-icons {
+  border: 1px solid black;
+  width: 7%;
+  float: right;
+
+  ul {
+    padding: 0;
+  }
+
+  ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+  }
+}
+
 
 //-------> Social Media Icon <----------------------
 

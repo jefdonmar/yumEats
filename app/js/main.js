@@ -17,12 +17,18 @@
 
 	// Special JS Code for "Daily Special" section
 
+<<<<<<< HEAD
 	var specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
 	var specialTemplate = _.template($('#specials').text());
+=======
+  var specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
+  var menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/2';
+>>>>>>> cori-dev
 
 	var specialPromise = $.getJSON(specialUrl);
 	var menuPromise = $.getJSON(menuUrl);
 
+<<<<<<< HEAD
 	Promise.all([specialPromise, menuPromise]).then(function (object) {});
 
 	// ----------------- Isaac javaScript -------------------- //
@@ -94,4 +100,27 @@
 		$('.menuDesserts').append(dessertsTemplate);
 		$('.menuVeradesserts').append(veradessertsTemplate);
 	};
+=======
+  var arrMenu = [];
+  var specialId = undefined;
+  var specialMenuItem = {};
+
+  specialPromise.then(function (spObj) {
+    specialId = spObj.menu_item_id;
+    return specialId;
+  });
+
+  menuPromise.then(function (obj) {
+
+    Object.keys(obj).forEach(function (key) {
+      arrMenu = arrMenu.concat(obj[key]);
+    });
+
+    specialMenuItem = _.findWhere(arrMenu, { id: specialId });
+
+    var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p>' + specialMenuItem.price + '</p>\n  <p>' + specialMenuItem.description + '</p>';
+
+    $('.daily-special').append(specialBlock);
+  });
+>>>>>>> cori-dev
 })();

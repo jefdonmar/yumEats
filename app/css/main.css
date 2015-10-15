@@ -8,6 +8,25 @@
 @import url(http://weloveiconfonts.com/api/?family=brandico);
 @import url(http://weloveiconfonts.com/api/?family=brandico);
 @import url(http://weloveiconfonts.com/api/?family=brandico);
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+.social-media-icons {
+  border: 1px solid black;
+  width: 7%;
+  float: right; }
+  .social-media-icons ul {
+    padding: 0; }
+  .social-media-icons ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px; }
+
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
 
