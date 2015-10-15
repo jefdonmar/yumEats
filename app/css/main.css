@@ -46,13 +46,17 @@
 .para1 {
   font-size: 12px;
   width: 575px;
-  line-height: 20px; }
+  line-height: 20px;
+  font-family: 'Walter Turncoat', cursive;
+  color: #0D3C1E; }
 
 .para2 {
   font-size: 12px;
   width: 575px;
   line-height: 20px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  font-family: 'Walter Turncoat', cursive;
+  color: #0D3C1E; }
 
 img {
   width: 575px;
@@ -70,51 +74,67 @@ img {
   font-weight: bold; }
 
 .fullName {
-  font-weight: bold; }
+  font-family: 'Shadows Into Light', cursive;
+  color: #00A16E; }
 
 .blankSpace1 {
+  background-color: gray;
+  color: black;
   width: 300px;
   height: 30px;
   margin-top: 15px; }
 
 .numberofGuests {
   padding-top: 20px;
-  font-weight: bold; }
+  font-family: 'Shadows Into Light', cursive;
+  color: #00A16E; }
 
 .blankSpace2 {
+  background-color: gray;
+  color: black;
   width: 100px;
   height: 30px;
   margin-top: 15px; }
 
 .date {
   padding-top: 20px;
-  font-weight: bold; }
+  font-family: 'Shadows Into Light', cursive;
+  color: #00A16E; }
 
 .blankSpace3 {
+  background-color: gray;
+  color: black;
   width: 100px;
   height: 30px;
   margin-top: 15px; }
 
 .specialNotes {
   padding-top: 20px;
-  font-weight: bold; }
+  font-family: 'Shadows Into Light', cursive;
+  color: #00A16E; }
 
 .blankSpace4 {
+  background-color: gray;
+  color: black;
   width: 400px;
   height: 80px;
   margin-top: 15px; }
 
 .seatingPreferance {
   padding-top: 20px;
-  font-weight: bold; }
+  font-family: 'Shadows Into Light', cursive;
+  color: #00A16E; }
 
 .seatingOption {
   margin-top: 10px;
-  width: 105px; }
+  width: 105px;
+  font-family: 'Shadows Into Light', cursive;
+  color: #00A16E; }
 
 .reserveButton {
-  color: white;
   background-color: black;
   width: 150px;
   height: 50px;
-  margin-left: 145px; }
+  margin-left: 145px;
+  font-family: 'Shadows Into Light', cursive;
+  color: #00A16E; }
