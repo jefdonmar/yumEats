@@ -13,16 +13,41 @@
 	// Function that determines what will be display to the HTML
 	let createTemplate = function(arr) {
 
+
+
 		// Var to add content
 		let menuBlock = '';
+		let prices = '';
+
+		// Function to grab prices with multiple price selections
+		arr.forEach(function(option) {
+			
+			if (option.price.cup) {
+				prices =`
+				<p>${ option.price.cup }</p>
+				<p>${ option.price.bowl }</p>`;
+			} else if (option.price.small) {
+				prices =`
+				<p>${ option.price.small }</p>
+				<p>${ option.price.large }</p>`;
+			} else {
+				prices = `<p>${ option.price }</p>`;
+			}
+
+		});
+
 
 		// For each statement to add to menuBlock var
 		arr.forEach(function(option) {
       		menuBlock += `
       		<h2>${ option.item }</h2>
-      		<p>${ option.description }</p>`;
+      		<p>${ option.description }</p>
+      		<p>${ prices }</p>`;
+
+      		console.log(menuBlock);
     	});
 
+		// Returnable var
 		let finalTemp =	`		
 			${menuBlock}			
 		`;
@@ -57,6 +82,8 @@
 		$('.menuVeradesserts').append(veradessertsTemplate);
 
  	}; 
+
+
 
 
 }());

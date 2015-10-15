@@ -16,12 +16,28 @@
 
 		// Var to add content
 		var menuBlock = '';
+		var prices = '';
+
+		// Function to grab prices with multiple price selections
+		arr.forEach(function (option) {
+
+			if (option.price.cup) {
+				prices = '\n\t\t\t\t<p>' + option.price.cup + '</p>\n\t\t\t\t<p>' + option.price.bowl + '</p>';
+			} else if (option.price.small) {
+				prices = '\n\t\t\t\t<p>' + option.price.small + '</p>\n\t\t\t\t<p>' + option.price.large + '</p>';
+			} else {
+				prices = '<p>' + option.price + '</p>';
+			}
+		});
 
 		// For each statement to add to menuBlock var
 		arr.forEach(function (option) {
-			menuBlock += '\n      \t\t<h2>' + option.item + '</h2>\n      \t\t<p>' + option.description + '</p>';
+			menuBlock += '\n      \t\t<h2>' + option.item + '</h2>\n      \t\t<p>' + option.description + '</p>\n      \t\t<p>' + prices + '</p>';
+
+			console.log(menuBlock);
 		});
 
+		// Returnable var
 		var finalTemp = '\t\t\n\t\t\t' + menuBlock + '\t\t\t\n\t\t';
 
 		// Return finalTemp to display template
