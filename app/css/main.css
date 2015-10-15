@@ -16,7 +16,6 @@ html {
 *::before {
   box-sizing: inherit; }
 
-
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
 
@@ -72,6 +71,15 @@ header {
     float: right; }
     header .social-media-icons ul li {
       list-style: none; }
+
+#imgRow {
+  height: 350px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden; }
+  #imgRow #main-image {
+    width: 940px;
+    height: 350px; }
 
 .three-columns {
   float: left;
