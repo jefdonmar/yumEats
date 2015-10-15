@@ -138,3 +138,29 @@ img {
   margin-left: 145px;
   font-family: 'Shadows Into Light', cursive;
   color: #00A16E; }
+
+.menu {
+  max-width: 700px; }
+  .menu h1 {
+    font-size: 24px;
+    border-bottom: 1px solid;
+    font-weight: 100; }
+  .menu .section {
+    font-size: 24px;
+    border-bottom: 1px solid; }
+  .menu .itemBlock .menuItem {
+    font-size: 16px;
+    display: inline-block; }
+  .menu .itemBlock .menuPrice {
+    font-size: 14px;
+    display: inline-block; }
+  .menu .itemBlock .dotted {
+    min-width: 50%;
+    display: inline-block;
+    border-bottom: 1px dotted; }
+  .menu .itemBlock .menuDes {
+    font-size: 12px; }
+  .menu .itemBlock ul {
+    float: right; }
+    .menu .itemBlock ul li {
+      display: inline-block; }

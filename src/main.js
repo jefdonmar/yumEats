@@ -41,8 +41,6 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 	// Function that determines what will be display to the HTML
 	let createTemplate = function(arr) {
 
-
-
 	// Var to add content
 	let menuBlock = '';
 	let prices = '';
@@ -52,14 +50,14 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 		
 		if (option.price.cup) {
 			prices =`
-			<p>${ option.price.cup }</p>
-			<p>${ option.price.bowl }</p>`;
+			<p class="priceCup">${ option.price.cup }</p>
+			<p class="priceBowl">${ option.price.bowl }</p>`;
 		} else if (option.price.small) {
 			prices =`
-			<p>${ option.price.small }</p>
-			<p>${ option.price.large }</p>`;
+			<p class="priceSmall">${ option.price.small }</p>
+			<p class="priceLarge">${ option.price.large }</p>`;
 		} else {
-			prices = `<p>${ option.price }</p>`;
+			prices = `${ option.price }`;
 		}
 
 	});
@@ -68,11 +66,18 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 	// For each statement to add to menuBlock var
 	arr.forEach(function(option) {
 			menuBlock += `
-			<h2>${ option.item }</h2>
-			<p>${ option.description }</p>
-			<p>${ prices }</p>`;
-
-			console.log(menuBlock);
+			<div class="itemBlock">
+				<h2 class="menuItem">${ option.item }</h2>
+				<div class="dotted"></div>
+				<p class="menuPrice">${ prices }</p>
+				<p class="menuDes">${ option.description }</p>
+				<ul>
+					<li class="brandico-allergy"></li>
+					<li class="brandico-favorite"></li>
+					<li class="brandico-spicy"></li>
+					<li class="brandico-vegan"></li>
+				</ul>
+			</div>`;
 	});
 
 	// Returnable var

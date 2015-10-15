@@ -47,23 +47,21 @@
 		arr.forEach(function (option) {
 
 			if (option.price.cup) {
-				prices = '\n\t\t\t\t<p>' + option.price.cup + '</p>\n\t\t\t\t<p>' + option.price.bowl + '</p>';
+				prices = '\n\t\t\t<p class="priceCup">' + option.price.cup + '</p>\n\t\t\t<p class="priceBowl">' + option.price.bowl + '</p>';
 			} else if (option.price.small) {
-				prices = '\n\t\t\t\t<p>' + option.price.small + '</p>\n\t\t\t\t<p>' + option.price.large + '</p>';
+				prices = '\n\t\t\t<p class="priceSmall">' + option.price.small + '</p>\n\t\t\t<p class="priceLarge">' + option.price.large + '</p>';
 			} else {
-				prices = '<p>' + option.price + '</p>';
+				prices = '' + option.price;
 			}
 		});
 
 		// For each statement to add to menuBlock var
 		arr.forEach(function (option) {
-			menuBlock += '\n      \t\t<h2>' + option.item + '</h2>\n      \t\t<p>' + option.description + '</p>\n      \t\t<p>' + prices + '</p>';
-
-			console.log(menuBlock);
+			menuBlock += '\n\t\t\t<div class="itemBlock">\n\t\t\t\t<h2 class="menuItem">' + option.item + '</h2>\n\t\t\t\t<div class="dotted"></div>\n\t\t\t\t<p class="menuPrice">' + prices + '</p>\n\t\t\t\t<p class="menuDes">' + option.description + '</p>\n\t\t\t\t<ul>\n\t\t\t\t\t<li class="brandico-allergy"></li>\n\t\t\t\t\t<li class="brandico-favorite"></li>\n\t\t\t\t\t<li class="brandico-spicy"></li>\n\t\t\t\t\t<li class="brandico-vegan"></li>\n\t\t\t\t</ul>\n\t\t\t</div>';
 		});
 
 		// Returnable var
-		var finalTemp = '\t\t\n\t\t\t' + menuBlock + '\t\t\t\n\t\t';
+		var finalTemp = '\t\t\n\t\t' + menuBlock + '\t\t\t\n\t';
 
 		// Return finalTemp to display template
 		return finalTemp;
