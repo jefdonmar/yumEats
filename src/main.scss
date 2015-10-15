@@ -1,3 +1,4 @@
+
 $borderColor: #B9B9B9;
 $apiColor: #EBEBEB;
 
@@ -263,6 +264,63 @@ img {
   font-family: 'Shadows Into Light', cursive;
   color: #00A16E;
 }
+
+// ------- Menu Section ------- //
+
+// Main body of menu
+.menu {
+  max-width: 700px;
+
+  h1 {
+    font-size: 24px;
+    border-bottom: 1px solid;
+    font-weight: 100;
+  }
+
+  // Class for each section header 
+  .section {
+    font-size: 24px;
+    border-bottom: 1px solid;
+
+  }
+
+  .itemBlock {
+
+    .menuItem {
+      font-size: 16px;
+      display: inline-block;
+
+    }
+
+    .menuPrice {
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .dotted {
+      min-width: 50%;
+      display: inline-block;
+      border-bottom: 1px dotted;
+    }
+
+    .menuDes {
+      font-size: 12px;
+    }
+
+    ul {
+      float: right;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    
+  }
+
+}
+// ------- End Menu Section -------//
+
 
 
 
