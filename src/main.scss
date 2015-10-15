@@ -1,3 +1,10 @@
+$borderColor: #B9B9B9;
+$apiColor: #EBEBEB;
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+
 
 //-------> Social Media Icon <----------------------
 
@@ -91,13 +98,8 @@
 
 //-------> Today's Special, Blog and Location Styles <----------
 
-$borderColor: #B9B9B9;
-$apiColor: #EBEBEB;
-
-@import "bourbon/bourbon";
-@import "neat/neat";
-
 .container {
+  @include span-columns(12);
   width: 940px;
   margin-left: 160px;
   margin-right: 160px;
@@ -128,28 +130,27 @@ $apiColor: #EBEBEB;
   }
 
   .three-columns{
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid borderColor;
-    display: inline-block;
-    box-sizing: border-box;
+    @include span-columns(12);
 
+    .glance {
+      @include span-columns(4);
+      background-color: apiColor;
 
-      .latest-news{
+      #latest-news{
         border: 1px solid $borderColor;
-        margin-right: 24px;
       }
 
-      .daily-special{
+      #daily-special{
+        @include omega ();
         border: 1px solid $borderColor;
-        margin-right: 24px;
       }
 
-      .location{
+      #location{
         border: 1px solid $borderColor;
-        margin-right: 24px;
       }
+    }
+    
+
   }
 
   .main-body{

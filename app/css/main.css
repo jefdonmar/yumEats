@@ -8,36 +8,6 @@
 @import url(http://weloveiconfonts.com/api/?family=brandico);
 @import url(http://weloveiconfonts.com/api/?family=brandico);
 @import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
 html {
   box-sizing: border-box; }
 
@@ -46,10 +16,46 @@ html {
 *::before {
   box-sizing: inherit; }
 
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
 .container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   width: 940px;
   margin-left: 160px;
   margin-right: 160px; }
+  .container:last-child {
+    margin-right: 0; }
 
 header {
   border-bottom: 1px solid borderColor;
@@ -67,21 +73,29 @@ header {
       list-style: none; }
 
 .three-columns {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid borderColor;
-  display: inline-block;
-  box-sizing: border-box; }
-  .three-columns .latest-news {
-    border: 1px solid #B9B9B9;
-    margin-right: 24px; }
-  .three-columns .daily-special {
-    border: 1px solid #B9B9B9;
-    margin-right: 24px; }
-  .three-columns .location {
-    border: 1px solid #B9B9B9;
-    margin-right: 24px; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .three-columns:last-child {
+    margin-right: 0; }
+  .three-columns .glance {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    background-color: apiColor; }
+    .three-columns .glance:last-child {
+      margin-right: 0; }
+    .three-columns .glance #latest-news {
+      margin: 0;
+      border: 1px solid #B9B9B9; }
+    .three-columns .glance #daily-special {
+      margin-right: 0;
+      border: 1px solid #B9B9B9; }
+    .three-columns .glance #location {
+      margin: 0;
+      border: 1px solid #B9B9B9; }
 
 footer {
   border-top: 1px solid borderColor;
