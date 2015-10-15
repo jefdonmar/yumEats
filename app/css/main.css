@@ -16,16 +16,6 @@ html {
 *::before {
   box-sizing: inherit; }
 
-.social-media-icons {
-  border: 1px solid black;
-  width: 7%;
-  float: right; }
-  .social-media-icons ul {
-    padding: 0; }
-  .social-media-icons ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 5px; }
 
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
@@ -56,41 +46,64 @@ html {
 
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
-
-<<<<<<< HEAD
-html {
-  box-sizing: border-box; }
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit; }
 
 .container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   width: 940px;
   margin-left: 160px;
   margin-right: 160px; }
+  .container:last-child {
+    margin-right: 0; }
 
 header {
   border-bottom: 1px solid borderColor;
-  height: 115px; }
+  height: 115px;
+  width: 100%; }
+  header .logo {
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+    float: left; }
+  header .social-media-icons {
+    display: inline-block;
+    float: right; }
+    header .social-media-icons ul li {
+      list-style: none; }
 
-.three-columns .latest-news {
-  border: 1px solid #B9B9B9;
-  margin-right: 24px; }
+.three-columns {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  width: 100%; }
+  .three-columns:last-child {
+    margin-right: 0; }
+  .three-columns .glance {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    background-color: apiColor; }
+    .three-columns .glance:last-child {
+      margin-right: 0; }
+    .three-columns .glance #latest-news {
+      border: 1px solid #B9B9B9; }
+    .three-columns .glance #daily-special {
+      margin-right: 0;
+      border: 1px solid #B9B9B9; }
+    .three-columns .glance #location {
+      border: 1px solid #B9B9B9; }
 
-.three-columns .daily-special {
-  border: 1px solid #B9B9B9;
-  margin-right: 24px; }
-
-.three-columns .location {
-  border: 1px solid #B9B9B9;
-  margin-right: 24px; }
+.main-body {
+  width: 100%; }
 
 footer {
   border-top: 1px solid borderColor;
   margin-bottom: 25px; }
-=======
+
 .our-story {
   margin-left: 150px;
   padding-top: 20px;
@@ -190,4 +203,3 @@ img {
   margin-left: 145px;
   font-family: 'Shadows Into Light', cursive;
   color: #00A16E; }
->>>>>>> 96ecf90076c6395fa2b7ea4f0e1fd3969504592f
