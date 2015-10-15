@@ -38,3 +38,83 @@
 
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
+
+.menu {
+  margin-left: 150px;
+  padding-top: 20px; }
+
+.para1 {
+  font-size: 12px;
+  width: 575px;
+  line-height: 20px; }
+
+.para2 {
+  font-size: 12px;
+  width: 575px;
+  line-height: 20px;
+  padding-top: 10px; }
+
+img {
+  width: 575px;
+  height: 250px;
+  padding-top: 10px; }
+
+.reservations {
+  margin-left: 110px; }
+
+.reservations ul li {
+  list-style: none;
+  font-size: 16px; }
+
+.reservationsTab {
+  font-weight: bold; }
+
+.fullName {
+  font-weight: bold; }
+
+.blankSpace1 {
+  width: 300px;
+  height: 30px;
+  margin-top: 15px; }
+
+.numberofGuests {
+  padding-top: 20px;
+  font-weight: bold; }
+
+.blankSpace2 {
+  width: 100px;
+  height: 30px;
+  margin-top: 15px; }
+
+.date {
+  padding-top: 20px;
+  font-weight: bold; }
+
+.blankSpace3 {
+  width: 100px;
+  height: 30px;
+  margin-top: 15px; }
+
+.specialNotes {
+  padding-top: 20px;
+  font-weight: bold; }
+
+.blankSpace4 {
+  width: 400px;
+  height: 80px;
+  margin-top: 15px; }
+
+.seatingPreferance {
+  padding-top: 20px;
+  font-weight: bold; }
+
+.seatingOption {
+  margin-top: 10px;
+  width: 105px; }
+
+.reserveButton {
+  color: white;
+  background-color: black;
+  width: 150px;
+  height: 50px;
+  margin-left: 145px; }
