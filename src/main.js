@@ -11,13 +11,12 @@ let blogPromise = $.getJSON(blogUrl);
 
 blogPromise.then( function(postInfo) {
   let blogInfo = blogTemplate(postInfo);
-  $('.latest-news').append(blogInfo);
+  $('#latest-news').append(blogInfo);
 });
 
 // Special JS Code for "Daily Special" section
 
 let specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
-let menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/2';
 
 let specialPromise = $.getJSON(specialUrl);
 let menuPromise = $.getJSON(menuUrl);
@@ -44,7 +43,7 @@ menuPromise.then( function(obj){
   <p>${ specialMenuItem.price }</p>
   <p>${ specialMenuItem.description }</p>`;
 
-  $('.daily-special').append(specialBlock);
+  $('#daily-special').append(specialBlock);
 
 });
 

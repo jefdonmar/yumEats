@@ -12,39 +12,37 @@
 
 	blogPromise.then(function (postInfo) {
 		var blogInfo = blogTemplate(postInfo);
-		$('.latest-news').append(blogInfo);
+		$('#latest-news').append(blogInfo);
 	});
 
 	// Special JS Code for "Daily Special" section
 
-  	var specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
-  	var menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/2';
-
+	var specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
 
 	var specialPromise = $.getJSON(specialUrl);
 	var menuPromise = $.getJSON(menuUrl);
 
-  	var arrMenu = [];
-  	var specialId = undefined;
-  	var specialMenuItem = {};
+	var arrMenu = [];
+	var specialId = undefined;
+	var specialMenuItem = {};
 
-  	specialPromise.then(function (spObj) {
-    specialId = spObj.menu_item_id;
-    return specialId;
-  	});
+	specialPromise.then(function (spObj) {
+		specialId = spObj.menu_item_id;
+		return specialId;
+	});
 
-  	menuPromise.then(function (obj) {
+	menuPromise.then(function (obj) {
 
-    Object.keys(obj).forEach(function (key) {
-      arrMenu = arrMenu.concat(obj[key]);
-    });
+		Object.keys(obj).forEach(function (key) {
+			arrMenu = arrMenu.concat(obj[key]);
+		});
 
-    specialMenuItem = _.findWhere(arrMenu, { id: specialId });
+		specialMenuItem = _.findWhere(arrMenu, { id: specialId });
 
-    var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p>' + specialMenuItem.price + '</p>\n  <p>' + specialMenuItem.description + '</p>';
+		var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p>' + specialMenuItem.price + '</p>\n  <p>' + specialMenuItem.description + '</p>';
 
-    $('.daily-special').append(specialBlock);
-  	});
+		$('#daily-special').append(specialBlock);
+	});
 
 	// ----------------- Isaac javaScript -------------------- //
 
@@ -113,6 +111,4 @@
 		$('.menuDesserts').append(dessertsTemplate);
 		$('.menuVeradesserts').append(veradessertsTemplate);
 	};
-
-
 })();
