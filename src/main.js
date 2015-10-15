@@ -35,7 +35,7 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 
 	// Function that runs our JSON url
 	promise.then (function (res) {
-		doSomething(res); 
+	doSomething(res); 
 	}); 
 
 	// Function that determines what will be display to the HTML
@@ -43,73 +43,73 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 
 
 
-		// Var to add content
-		let menuBlock = '';
-		let prices = '';
+	// Var to add content
+	let menuBlock = '';
+	let prices = '';
 
-		// Function to grab prices with multiple price selections
-		arr.forEach(function(option) {
-			
-			if (option.price.cup) {
-				prices =`
-				<p>${ option.price.cup }</p>
-				<p>${ option.price.bowl }</p>`;
-			} else if (option.price.small) {
-				prices =`
-				<p>${ option.price.small }</p>
-				<p>${ option.price.large }</p>`;
-			} else {
-				prices = `<p>${ option.price }</p>`;
-			}
+	// Function to grab prices with multiple price selections
+	arr.forEach(function(option) {
+		
+		if (option.price.cup) {
+			prices =`
+			<p>${ option.price.cup }</p>
+			<p>${ option.price.bowl }</p>`;
+		} else if (option.price.small) {
+			prices =`
+			<p>${ option.price.small }</p>
+			<p>${ option.price.large }</p>`;
+		} else {
+			prices = `<p>${ option.price }</p>`;
+		}
 
-		});
+	});
 
 
-		// For each statement to add to menuBlock var
-		arr.forEach(function(option) {
-      		menuBlock += `
-      		<h2>${ option.item }</h2>
-      		<p>${ option.description }</p>
-      		<p>${ prices }</p>`;
+	// For each statement to add to menuBlock var
+	arr.forEach(function(option) {
+			menuBlock += `
+			<h2>${ option.item }</h2>
+			<p>${ option.description }</p>
+			<p>${ prices }</p>`;
 
-      		console.log(menuBlock);
-    	});
+			console.log(menuBlock);
+	});
 
-		// Returnable var
-		let finalTemp =	`		
-			${menuBlock}			
-		`;
+	// Returnable var
+	let finalTemp =	`		
+		${menuBlock}			
+	`;
 
-		// Return finalTemp to display template
-		return finalTemp;
+	// Return finalTemp to display template
+	return finalTemp;
 	}; 
- 	
- 	// Function to display and append array to html
- 	let doSomething = function (obj) {
 
- 		// Var that grab specific arrays
- 		let breakfastTemplate = createTemplate(obj.breakfast);
- 		let sandwichesTemplate = createTemplate(obj.sandwiches);
- 		let toppingsTemplate = createTemplate(obj.toppings);
- 		let sidesTemplate = createTemplate(obj.sides);
- 		let saladsTemplate = createTemplate(obj.salads);
- 		let soupsTemplate = createTemplate(obj.soups);
- 		let drinksTemplate = createTemplate(obj.drinks);
- 		let dessertsTemplate = createTemplate(obj.desserts);
- 		let veradessertsTemplate = createTemplate(obj.veraDesserts);
+	// Function to display and append array to html
+	let doSomething = function (obj) {
 
- 		// Append to the specific div class depending upon the var
-		$('.menuBreakfast').append(breakfastTemplate);
-		$('.menuSandwiches').append(sandwichesTemplate);
-		$('.menuToppings').append(toppingsTemplate);
-		$('.menuSides').append(sidesTemplate);
-		$('.menuSalads').append(saladsTemplate);
-		$('.menuSoups').append(soupsTemplate);
-		$('.menuDrinks').append(drinksTemplate);
-		$('.menuDesserts').append(dessertsTemplate);
-		$('.menuVeradesserts').append(veradessertsTemplate);
+	// Var that grab specific arrays
+	let breakfastTemplate = createTemplate(obj.breakfast);
+	let sandwichesTemplate = createTemplate(obj.sandwiches);
+	let toppingsTemplate = createTemplate(obj.toppings);
+	let sidesTemplate = createTemplate(obj.sides);
+	let saladsTemplate = createTemplate(obj.salads);
+	let soupsTemplate = createTemplate(obj.soups);
+	let drinksTemplate = createTemplate(obj.drinks);
+	let dessertsTemplate = createTemplate(obj.desserts);
+	let veradessertsTemplate = createTemplate(obj.veraDesserts);
 
- 	}; 
+	// Append to the specific div class depending upon the var
+	$('.menuBreakfast').append(breakfastTemplate);
+	$('.menuSandwiches').append(sandwichesTemplate);
+	$('.menuToppings').append(toppingsTemplate);
+	$('.menuSides').append(sidesTemplate);
+	$('.menuSalads').append(saladsTemplate);
+	$('.menuSoups').append(soupsTemplate);
+	$('.menuDrinks').append(drinksTemplate);
+	$('.menuDesserts').append(dessertsTemplate);
+	$('.menuVeradesserts').append(veradessertsTemplate);
+
+	}; 
 
 
 
