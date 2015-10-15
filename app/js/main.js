@@ -24,5 +24,9 @@
   var specialPromise = $.getJSON(specialUrl);
   var menuPromise = $.getJSON(menuUrl);
 
-  Promise.all([specialPromise, menuPromise]).then(function (object) {});
+  Promise.all([specialPromise, menuPromise]).then(function (array) {
+    var specialStuff = array[0];
+    var menuItems = array[1];
+    console.log(array);
+  });
 })();

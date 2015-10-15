@@ -23,8 +23,10 @@ let specialPromise = $.getJSON(specialUrl);
 let menuPromise = $.getJSON(menuUrl);
 
 
-Promise.all([specialPromise, menuPromise]).then(function(object){
-
+Promise.all([specialPromise, menuPromise]).then(function(array){
+  let specialStuff = array[0];
+  let menuItems = array[1];
+  console.log(array);
 });
 
 
