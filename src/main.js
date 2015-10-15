@@ -17,20 +17,48 @@ blogPromise.then( function(postInfo) {
 
 let specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
 let menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/2';
-let specialTemplate = _.template($('#specials').text());
 
 let specialPromise = $.getJSON(specialUrl);
 let menuPromise = $.getJSON(menuUrl);
 
+let arrMenu = [];
+let specialId;
+let specialMenuItem = {};
 
-Promise.all([specialPromise, menuPromise]).then(function(array){
-  let specialStuff = array[0];
-  let menuItems = array[1];
-  console.log(array);
+specialPromise.then( function(spObj){
+  specialId = spObj.menu_item_id;
+  return specialId;
+});
+
+menuPromise.then( function(obj){
+
+  Object.keys(obj).forEach(function(key) {
+    arrMenu = arrMenu.concat(obj[key]);
+  });
+
+  specialMenuItem = _.findWhere(arrMenu, {id: specialId });
+
+  let specialBlock = `
+  <p>${ specialMenuItem.item }</p>
+  <p>${ specialMenuItem.price }</p>
+  <p>${ specialMenuItem.description }</p>`;
+
+  $('.daily-special').append(specialBlock);
+
 });
 
 
 
+
 }());
+
+
+
+
+
+
+
+
+
 
 
