@@ -17,7 +17,6 @@ blogPromise.then( function(postInfo) {
 // Special JS Code for "Daily Special" section
 
 let specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
-let menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/2';
 let specialTemplate = _.template($('#specials').text());
 
 let specialPromise = $.getJSON(specialUrl);
@@ -28,6 +27,7 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 
 });
 
+// ----------------- Isaac javaScript -------------------- //
 	
 	// Var set to our URL and the URL for our getJSON method
 	let menuUrl = "https://json-data.herokuapp.com/restaurant/menu/2";

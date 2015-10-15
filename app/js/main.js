@@ -2,31 +2,31 @@
 
 (function () {
 
-<<<<<<< HEAD
-  // Blog JS Code for "Latest News" section
+	// Blog JS Code for "Latest News" section
 
-  var blogUrl = 'https://json-data.herokuapp.com/restaurant/news/1';
+	var blogUrl = 'https://json-data.herokuapp.com/restaurant/news/1';
 
-  var blogTemplate = _.template($('#blog-post').text());
+	var blogTemplate = _.template($('#blog-post').text());
 
-  var blogPromise = $.getJSON(blogUrl);
+	var blogPromise = $.getJSON(blogUrl);
 
-  blogPromise.then(function (postInfo) {
-    var blogInfo = blogTemplate(postInfo);
-    $('.latest-news').append(blogInfo);
-  });
+	blogPromise.then(function (postInfo) {
+		var blogInfo = blogTemplate(postInfo);
+		$('.latest-news').append(blogInfo);
+	});
 
-  // Special JS Code for "Daily Special" section
+	// Special JS Code for "Daily Special" section
 
-  var specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
-  var menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/2';
-  var specialTemplate = _.template($('#specials').text());
+	var specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
+	var specialTemplate = _.template($('#specials').text());
 
-  var specialPromise = $.getJSON(specialUrl);
-  var menuPromise = $.getJSON(menuUrl);
+	var specialPromise = $.getJSON(specialUrl);
+	var menuPromise = $.getJSON(menuUrl);
 
-  Promise.all([specialPromise, menuPromise]).then(function (object) {});
-=======
+	Promise.all([specialPromise, menuPromise]).then(function (object) {});
+
+	// ----------------- Isaac javaScript -------------------- //
+
 	// Var set to our URL and the URL for our getJSON method
 	var menuUrl = "https://json-data.herokuapp.com/restaurant/menu/2";
 	var promise = $.getJSON(menuUrl);
@@ -94,5 +94,4 @@
 		$('.menuDesserts').append(dessertsTemplate);
 		$('.menuVeradesserts').append(veradessertsTemplate);
 	};
->>>>>>> isaac-dev
 })();
