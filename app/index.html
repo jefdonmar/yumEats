@@ -15,7 +15,11 @@
       <div class='restaurant-pic'></div>
       <div class='latest-news'></div>
       <div class='daily-special'></div>
-      <div class='location'></div>
+      <div class='location'>
+        <span>Our Location</span>
+        <iframe width="300" height="150" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:EjA5MzMgV2VzdCBQZWFjaHRyZWUgU3QgTlcsIEF0bGFudGEsIEdBIDMwMzA5LCBVU0E&key=AIzaSyDhxw6TiEdV11CzzDCmhdGu9WpuNl90bBQ" allowfullscreen></iframe>
+        <span>555.555.5555 &middot; 555.555.5555 &middot; Map &middot; Directions</span> 
+      </div>
     </div>
     <div class='main-body'>
       <div class='our-story'></div>
@@ -28,6 +32,18 @@
     </aside>
     <footer></footer>
   </div>
+
+  <script type="text/template" id="blog-post">
+    <p><%= title %></p>
+    <p><%= date_published %></p>
+    <p><%= post %></p>
+  </script>
+
+  <script type="text/template" id="specials">
+    <p><%= item %></p>
+    <p><%= price %></p>
+    <p><%= description %></p>
+  </script>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
