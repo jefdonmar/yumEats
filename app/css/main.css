@@ -76,6 +76,7 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
+  width: 100%;
   width: 100%; }
   .three-columns:last-child {
     margin-right: 0; }
@@ -94,6 +95,9 @@ header {
       border: 1px solid #B9B9B9; }
     .three-columns .glance #location {
       border: 1px solid #B9B9B9; }
+
+.main-body {
+  width: 100%; }
 
 footer {
   border-top: 1px solid borderColor;

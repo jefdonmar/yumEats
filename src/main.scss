@@ -131,6 +131,7 @@ $apiColor: #EBEBEB;
 
   .three-columns{
     @include span-columns(12);
+    width: 100%;
 
     .glance {
       @include span-columns(4);
@@ -153,6 +154,7 @@ $apiColor: #EBEBEB;
   }
 
   .main-body{
+    width: 100%
 
   }
 
