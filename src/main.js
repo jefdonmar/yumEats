@@ -1,47 +1,60 @@
 (function () {
 
 	
-	// blah
+	// Var set to our URL and the URL for our getJSON method
 	let menuUrl = "https://json-data.herokuapp.com/restaurant/menu/2";
 	let promise = $.getJSON(menuUrl);
-	console.log(promise);
 
-	// blah
+	// Function that runs our JSON url
 	promise.then (function (res) {
-		console.log(res);
 		doSomething(res); 
 	}); 
 
-	// blah
+	// Function that determines what will be display to the HTML
 	let createTemplate = function(arr) {
-		console.log(arr);
+
+		// Var to add content
 		let menuBlock = '';
 
+		// For each statement to add to menuBlock var
 		arr.forEach(function(option) {
       		menuBlock += `
       		<h2>${ option.item }</h2>
       		<p>${ option.description }</p>`;
     	});
 
-		let finalTemp =`
-			<div class="menuBreakfast">
-				${menuBlock}
-			</div>
+		let finalTemp =	`		
+			${menuBlock}			
 		`;
+
+		// Return finalTemp to display template
 		return finalTemp;
 	}; 
  	
- 	// blah
+ 	// Function to display and append array to html
  	let doSomething = function (obj) {
+
+ 		// Var that grab specific arrays
  		let breakfastTemplate = createTemplate(obj.breakfast);
- 		let dessertsTemplate = createTemplate(obj.desserts);
+ 		let sandwichesTemplate = createTemplate(obj.sandwiches);
+ 		let toppingsTemplate = createTemplate(obj.toppings);
+ 		let sidesTemplate = createTemplate(obj.sides);
+ 		let saladsTemplate = createTemplate(obj.salads);
+ 		let soupsTemplate = createTemplate(obj.soups);
  		let drinksTemplate = createTemplate(obj.drinks);
+ 		let dessertsTemplate = createTemplate(obj.desserts);
+ 		let veradessertsTemplate = createTemplate(obj.veraDesserts);
 
- 		console.log(breakfastTemplate);
-
- 			$('.menu').append(breakfastTemplate);
- 			$('.menu').append(dessertsTemplate);
-			$('.menu').append(drinksTemplate);
+ 		// Append to the specific div class depending upon the var
+		$('.menuBreakfast').append(breakfastTemplate);
+		$('.menuSandwiches').append(sandwichesTemplate);
+		$('.menuToppings').append(toppingsTemplate);
+		$('.menuSides').append(sidesTemplate);
+		$('.menuSalads').append(saladsTemplate);
+		$('.menuSoups').append(soupsTemplate);
+		$('.menuDrinks').append(drinksTemplate);
+		$('.menuDesserts').append(dessertsTemplate);
+		$('.menuVeradesserts').append(veradessertsTemplate);
 
  	}; 
 
