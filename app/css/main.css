@@ -88,13 +88,11 @@ header {
     .three-columns .glance:last-child {
       margin-right: 0; }
     .three-columns .glance #latest-news {
-      margin: 0;
       border: 1px solid #B9B9B9; }
     .three-columns .glance #daily-special {
       margin-right: 0;
       border: 1px solid #B9B9B9; }
     .three-columns .glance #location {
-      margin: 0;
       border: 1px solid #B9B9B9; }
 
 footer {
