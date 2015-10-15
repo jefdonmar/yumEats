@@ -23,7 +23,6 @@
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
 
-/* brandico */
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
 
@@ -38,3 +37,36 @@
 
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+.container {
+  width: 940px;
+  margin-left: 160px;
+  margin-right: 160px; }
+
+header {
+  border-bottom: 1px solid borderColor;
+  height: 115px; }
+
+.three-columns .latest-news {
+  border: 1px solid #B9B9B9;
+  margin-right: 24px; }
+
+.three-columns .daily-special {
+  border: 1px solid #B9B9B9;
+  margin-right: 24px; }
+
+.three-columns .location {
+  border: 1px solid #B9B9B9;
+  margin-right: 24px; }
+
+footer {
+  border-top: 1px solid borderColor;
+  margin-bottom: 25px; }

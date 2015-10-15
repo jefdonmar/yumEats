@@ -33,8 +33,6 @@
 
 //FLICKR icon
 @import url(http://weloveiconfonts.com/api/?family=brandico);
-
-/* brandico */
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif;
 }
@@ -89,3 +87,60 @@
 //   <li class="brandico-vegan"></li>
 //   <li class="brandico-allergy"></li>
 // </ul>
+
+//-------> Today's Special Styles <----------
+
+$borderColor: #B9B9B9;
+$apiColor: #EBEBEB;
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+.container {
+  width: 940px;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+  header{
+    border-bottom: 1px solid borderColor;
+    height: 115px;
+      .logo{
+
+      }
+
+      .social-media-icons{
+
+      }
+  }
+
+  .three-columns{
+
+
+      .latest-news{
+        border: 1px solid $borderColor;
+        margin-right: 24px;
+      }
+
+      .daily-special{
+        border: 1px solid $borderColor;
+        margin-right: 24px;
+      }
+
+      .location{
+        border: 1px solid $borderColor;
+        margin-right: 24px;
+      }
+  }
+
+  .main-body{
+
+  }
+
+  footer{
+    border-top: 1px solid borderColor;
+    margin-bottom: 25px;
+  }
+
+
+
+
