@@ -88,8 +88,8 @@
 //   <li class="brandico-allergy"></li>
 // </ul>
 
-<<<<<<< HEAD
-//-------> Today's Special Styles <----------
+
+//-------> Today's Special, Blog and Location Styles <----------
 
 $borderColor: #B9B9B9;
 $apiColor: #EBEBEB;
@@ -105,16 +105,35 @@ $apiColor: #EBEBEB;
   header{
     border-bottom: 1px solid borderColor;
     height: 115px;
-      .logo{
+    width: 100%;
 
-      }
+    
+    .logo{
+      width: 300px;
+      height: 80px;
+      display: inline-block;
+      float: left;
 
-      .social-media-icons{
+    }
 
-      }
+    .social-media-icons{
+      display: inline-block;
+      float: right;
+
+        ul li{
+          list-style: none;
+        }
+      
+    }
   }
 
   .three-columns{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid borderColor;
+    display: inline-block;
+    box-sizing: border-box;
 
 
       .latest-news{
@@ -141,7 +160,6 @@ $apiColor: #EBEBEB;
     border-top: 1px solid borderColor;
     margin-bottom: 25px;
   }
-=======
 
 .our-story {
   margin-left: 150px;
@@ -251,7 +269,7 @@ img {
 
 
 
->>>>>>> 96ecf90076c6395fa2b7ea4f0e1fd3969504592f
+
 
 
 
