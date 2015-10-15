@@ -31,6 +31,27 @@
   font-family: 'brandico', sans-serif;
 }
 
+//FLICKR icon
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
+// <!-- how to do Single Element in HTML-->
+// <span class="brandico-instagram"></span>
+
+// <!-- how to Group of Elements in HTML -->
+// <ul>
+//   <li class="brandico-instagram"></li>
+//   <li class="brandico-facebook"></li>
+//   <li class="brandico-twitter"></li>
+//   <li class="brandico-opentable"></li>
+//   <li class="brandico-yelp"></li>
+//   <li class="brandico-flickr"></li>
+// </ul>
+
 
 //----------> Menu Icons <-------------
 
@@ -57,3 +78,14 @@
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif;
 }
+
+// <!-- how to do Single Element in HTML-->
+// <span class="brandico-spicy"></span>
+
+// <!-- how to Group of Elements in HTML -->
+// <ul>
+//   <li class="brandico-spicy"></li>
+//   <li class="brandico-favorite"></li>
+//   <li class="brandico-vegan"></li>
+//   <li class="brandico-allergy"></li>
+// </ul>
