@@ -1,54 +1,5 @@
 (function () {
 
-
-// Blog JS Code for "Latest News" section
-
-let blogUrl = 'https://json-data.herokuapp.com/restaurant/news/1';
-
-let blogTemplate = _.template($('#blog-post').text());
-
-let blogPromise = $.getJSON(blogUrl);
-
-blogPromise.then( function(postInfo) {
-  let blogInfo = blogTemplate(postInfo);
-  $('#latest-news').append(blogInfo);
-});
-
-// Special JS Code for "Daily Special" section
-
-let specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
-
-let specialPromise = $.getJSON(specialUrl);
-let menuPromise = $.getJSON(menuUrl);
-
-let arrMenu = [];
-let specialId;
-let specialMenuItem = {};
-
-specialPromise.then( function(spObj){
-  specialId = spObj.menu_item_id;
-  return specialId;
-});
-
-menuPromise.then( function(obj){
-	console.log(obj);
-  Object.keys(obj).forEach(function(key) {
-    arrMenu = arrMenu.concat(obj[key]);
-  });
-
-  specialMenuItem = _.findWhere(arrMenu, {id: specialId });
-
-  let specialBlock = `
-  <p>${ specialMenuItem.item }</p>
-  <p>${ specialMenuItem.price }</p>
-  <p>${ specialMenuItem.description }</p>`;
-
-  console.log(specialBlock);
-
-  $('#daily-special').append(specialBlock);
-
-});
-
 // ----------------- Isaac javaScript -------------------- //
 	
 	// Var set to our URL and the URL for our getJSON method
@@ -137,6 +88,57 @@ menuPromise.then( function(obj){
 	$('.menuVeradesserts').append(veradessertsTemplate);
 
 	}; 
+
+
+// Cori's Javascript 
+
+// Blog JS Code for "Latest News" section
+
+let blogUrl = 'https://json-data.herokuapp.com/restaurant/news/1';
+
+let blogTemplate = _.template($('#blog-post').text());
+
+let blogPromise = $.getJSON(blogUrl);
+
+blogPromise.then( function(postInfo) {
+  let blogInfo = blogTemplate(postInfo);
+  $('#latest-news').append(blogInfo);
+});
+
+// Special JS Code for "Daily Special" section
+
+let specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
+
+let specialPromise = $.getJSON(specialUrl);
+let menuPromise = $.getJSON(menuUrl);
+
+let arrMenu = [];
+let specialId;
+let specialMenuItem = {};
+
+specialPromise.then( function(spObj){
+  specialId = spObj.menu_item_id;
+  return specialId;
+});
+
+menuPromise.then( function(obj){
+	console.log(obj);
+  Object.keys(obj).forEach(function(key) {
+    arrMenu = arrMenu.concat(obj[key]);
+  });
+
+  specialMenuItem = _.findWhere(arrMenu, {id: specialId });
+
+  let specialBlock = `
+  <p>${ specialMenuItem.item }</p>
+  <p>${ specialMenuItem.price }</p>
+  <p>${ specialMenuItem.description }</p>`;
+
+  console.log(specialBlock);
+
+  $('#daily-special').append(specialBlock);
+
+});
 
 }());
 
