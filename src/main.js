@@ -134,8 +134,6 @@ menuPromise.then( function(obj){
   <p>${ specialMenuItem.price }</p>
   <p>${ specialMenuItem.description }</p>`;
 
-  console.log(specialBlock);
-
   $('#daily-special').append(specialBlock);
 
 });

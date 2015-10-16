@@ -111,8 +111,6 @@
 
 		var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p>' + specialMenuItem.price + '</p>\n  <p>' + specialMenuItem.description + '</p>';
 
-		console.log(specialBlock);
-
 		$('#daily-special').append(specialBlock);
 	});
 })();
