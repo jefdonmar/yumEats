@@ -97,11 +97,21 @@ $apiColor: #EBEBEB;
 
 //-------> Today's Special, Blog and Location Styles <----------
 
-.container {
-  @include span-columns(12);
+body{
   width: 940px;
   margin-left: 160px;
   margin-right: 160px;
+
+  ul,li{
+    list-style: none;
+  }
+
+}
+
+
+.container {
+  @include span-columns(12);
+
 }
   header{
     border-bottom: 1px solid $borderColor;
@@ -128,13 +138,26 @@ $apiColor: #EBEBEB;
     }
   }
 
+  #imgRow {
+    height: 350px;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+      #main-image{
+        width: 940px;
+        height: 350px;
+      }
+  }
+
   .three-columns{
     @include span-columns(12);
-    width: 100%;
 
     .glance {
-      @include span-columns(4);
+      @include span-columns(4 of 12);
+      border: $borderColor;
       background-color: $apiColor;
+
 
       #latest-news{
         border: 1px solid $borderColor;
@@ -152,118 +175,64 @@ $apiColor: #EBEBEB;
 
   }
 
-  .main-body{
-    width: 100%
+  #main-body{
+    @include outer-container;
+    @include span-columns(12);
+    background-color: green;
 
-  }
+
 
   footer{
     border-top: 1px solid $borderColor;
     margin-bottom: 25px;
   }
+      #dynamicContainer {
+         @include span-columns(8 of 12);
+         // @include omega ();
 
-.our-story {
-  margin-left: 150px;
-  padding-top: 20px;
-  width: 670px;
-}
-.para1 {
-  font-size: 14px;
-  width: 100%;
-  line-height: 20px;
-  font-family: 'Walter Turncoat', cursive;
-  color: #0D3C1E;
+         background-color: orange;
+         height: 1200px;
+         float: left;
 
-}
-.para2 {
-  font-size: 14px;
-  width: 100%;
-  line-height: 20px;
-  padding-top: 10px;
-  font-family: 'Walter Turncoat', cursive;
-  color: #0D3C1E;
-}
-img {
-  width: 100%;
-  padding-top: 10px;
-}
-.reservations {
-  margin-left: 110px;
-}
+         .tabWrapper {
+          width: 100%;
 
-.reservations ul li {
-  list-style: none;
-  font-size: 16px;
+          .tab li {
+            background: none;
+            background-color: pink;
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+          }
+
+          .tab li.open {
+            background: white;
+          }
+
+          .tabContent.open{
+            display: block;
+          }
+         }
+      }
+
+ #foodPhotoContainer{
+  @include span-columns(4);
+  @include omega();
+  border: $borderColor;
+  float: right;
 }
-.reservationsTab {
-  font-weight: bold;
-}
-.fullName {
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
-.blankSpace1 {
-  background-color: gray;
-  color: black;
-  width: 300px;
-  height: 30px;
-  margin-top: 15px;
-}
-.numberofGuests {
-  padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
-.blankSpace2 {
-  background-color: gray;
-  color: black;
-  width: 100px;
-  height: 30px;
-  margin-top: 15px;
-}
-.date {
-  padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
-.blankSpace3 {
-  background-color: gray;
-  color: black;
-  width: 100px;
-  height: 30px;
-  margin-top: 15px;
-}
-.specialNotes {
-  padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
-.blankSpace4 {
-  background-color: gray;
-  color: black;
-  width: 400px;
-  height: 80px;
-  margin-top: 15px;
-}
-.seatingPreferance {
-  padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
-.seatingOption  {
-  margin-top: 10px;
-  width: 105px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
-.reserveButton {
-  background-color: black;
-  width: 150px;
-  height: 50px;
-  margin-left: 145px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
+  
+  .foodPhotos {
+    @include span-columns(4 of 4);
+    @include omega(1n);
+    border: $borderColor;
+    height: 280px;
+    background-color: $apiColor;
+    margin: 0 0 40px 0;
+  }
+
+    
+    }
 
 // ------- Menu Section ------- //
 
@@ -317,7 +286,6 @@ img {
       float: right;
       margin-top: 10px;
     }
-
     
   }
 
@@ -325,6 +293,110 @@ img {
 // ------- End Menu Section -------//
 
 
+  //       .our-story {
+  //         margin-left: 150px;
+  //         padding-top: 20px;
+  //         width: 670px;
+  //       }
+  //       .para1 {
+  //         font-size: 14px;
+  //         width: 100%;
+  //         line-height: 20px;
+  //         font-family: 'Walter Turncoat', cursive;
+  //         color: #0D3C1E;
+
+  //       }
+  //       .para2 {
+  //         font-size: 14px;
+  //         width: 100%;
+  //         line-height: 20px;
+  //         padding-top: 10px;
+  //         font-family: 'Walter Turncoat', cursive;
+  //         color: #0D3C1E;
+  //       }
+  //       img {
+  //         width: 100%;
+  //         padding-top: 10px;
+  //       }
+  //       .reservations {
+  //         margin-left: 110px;
+  //       }
+
+  //       .reservations ul li {
+  //         list-style: none;
+  //         font-size: 16px;
+  //       }
+  //       .reservationsTab {
+  //         font-weight: bold;
+  //       }
+  //       .fullName {
+  //         font-family: 'Shadows Into Light', cursive;
+  //         color: #00A16E;
+  //       }
+  //       .blankSpace1 {
+  //         background-color: gray;
+  //         color: black;
+  //         width: 300px;
+  //         height: 30px;
+  //         margin-top: 15px;
+  //       }
+  //       .numberofGuests {
+  //         padding-top: 20px;
+  //         font-family: 'Shadows Into Light', cursive;
+  //         color: #00A16E;
+  //       }
+  //       .blankSpace2 {
+  //         background-color: gray;
+  //         color: black;
+  //         width: 100px;
+  //         height: 30px;
+  //         margin-top: 15px;
+  //       }
+  //       .date {
+  //         padding-top: 20px;
+  //         font-family: 'Shadows Into Light', cursive;
+  //         color: #00A16E;
+  //       }
+  //       .blankSpace3 {
+  //         background-color: gray;
+  //         color: black;
+  //         width: 100px;
+  //         height: 30px;
+  //         margin-top: 15px;
+  //       }
+  //       .specialNotes {
+  //         padding-top: 20px;
+  //         font-family: 'Shadows Into Light', cursive;
+  //         color: #00A16E;
+  //       }
+  //       .blankSpace4 {
+  //         background-color: gray;
+  //         color: black;
+  //         width: 400px;
+  //         height: 80px;
+  //         margin-top: 15px;
+  //       }
+  //       .seatingPreferance {
+  //         padding-top: 20px;
+  //         font-family: 'Shadows Into Light', cursive;
+  //         color: #00A16E;
+  //       }
+  //       .seatingOption  {
+  //         margin-top: 10px;
+  //         width: 105px;
+  //         font-family: 'Shadows Into Light', cursive;
+  //         color: #00A16E;
+  //       }
+  //       .reserveButton {
+  //         background-color: black;
+  //         width: 150px;
+  //         height: 50px;
+  //         margin-left: 145px;
+  //         font-family: 'Shadows Into Light', cursive;
+  //         color: #00A16E;
+  //       }
+
+  // }
 
 
 
