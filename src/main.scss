@@ -1,83 +1,14 @@
 
 $borderColor: #B9B9B9;
 $apiColor: #EBEBEB;
+$bottleGreen: #0D3C1E;
 
 @import "bourbon/bourbon";
 @import "neat/neat";
 
 //-------> Social Media Icon <----------------------
 
-// INSTAGRAM Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-// FACEBOOK Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//TWITTER Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//OPENTABLE icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//YELP icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//FLICKR icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-// <!-- how to do Single Element in HTML-->
-// <span class="brandico-instagram"></span>
-
-// <!-- how to Group of Elements in HTML -->
-// <ul>
-//   <li class="brandico-instagram"></li>
-//   <li class="brandico-facebook"></li>
-//   <li class="brandico-twitter"></li>
-//   <li class="brandico-opentable"></li>
-//   <li class="brandico-yelp"></li>
-//   <li class="brandico-flickr"></li>
-// </ul>
-
-
-//----------> Menu Icons <-------------
-
-//Spicy Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//Restaurant Favorite Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//Vegan Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//Allergy Info Icon 
+//  Icon
 @import url(http://weloveiconfonts.com/api/?family=brandico);
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif;
@@ -265,7 +196,9 @@ img {
   color: #00A16E;
 }
 
+//////////////////////////////////
 // ------- Menu Section ------- //
+//////////////////////////////////
 
 // Main body of menu
 .menu {
@@ -287,37 +220,229 @@ img {
 
   .itemBlock {
     width: 700px;
+    border: 1px dotted;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
 
-    .menuItem {
-      font-size: 16px;
+
+    .blockLeft {
       display: inline-block;
-
-    }
-
-    .menuPrice {
-      font-size: 14px;
-      display: inline-block;
-
-
-    }
-
-    .dotted {
-      width: 400px;
-      border-bottom: 1px dotted;
-      display: inline-block;
-    }
-
-    .menuDes {
-      font-size: 12px;
       
+
+      .menuItem {
+        font-size: 16px;
+        display: inline-block;
+
+      }
+
+      .menuDes {
+        font-size: 12px;
+        
+      }
     }
 
-    .menuIcons {
-      
+    .blockRight {
       float: right;
-      margin-top: 10px;
-    }
+      display: inline-block;
+      text-align: right;
 
+      .menuPrice {
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 28px;
+      }
+
+      .priceCup {
+        margin: 0;
+        margin-top: -44px;
+      }
+      .priceBowl {
+        margin: 0;
+      }
+
+      .menuIcons {
+
+        &:before {
+          content: '';
+          position: absolute;
+          margin-left: -10px;
+          margin-top: -4px;
+          background-color: black;
+          width: 1px;
+          height: 25px;
+        }
+
+        .fa-exclamation-circle {
+          
+          
+          &:hover {
+            border: 1px solid;
+            padding: 2px;
+            border-radius: 5px;
+
+          }
+
+          &:hover .exclamationHover {
+            display: block;
+          }
+
+          .exclamationHover {
+            display: none;
+            width: 245px;
+            height: 110px;
+            background-color: $bottleGreen;
+            position: absolute;
+            border-radius: 10px;
+            right: 592px;
+            margin-top: 2px;
+            color: #fff;
+            text-align: center;
+            z-index: 1000;
+
+            h2 {
+              border-bottom: 1px dotted #fff;
+              padding: 5px 0px;
+              margin: 10px 20px;
+
+
+            }
+
+            p {
+              padding: 0px 16px;
+              a {
+                text-decloration: none;
+              }
+            }
+
+
+
+          }
+        }
+        .fa-star {
+           
+
+          &:hover {
+            border: 1px solid;
+            padding: 2px;
+            border-radius: 5px;
+          }
+
+          &:hover .starHover {
+            display: block;
+          }
+
+          .starHover {
+            display: none;
+            width: 245px;
+            height: 110px;
+            background-color: $bottleGreen;
+            position: absolute;
+            border-radius: 10px;
+            right: 574px;
+            margin-top: 2px;
+            color: #fff;
+            text-align: center;
+            z-index: 1000;
+
+
+            h2 {
+              border-bottom: 1px dotted #fff;
+              padding: 5px 0px;
+              margin: 10px 20px;
+
+            }
+
+            button {
+              color: $bottleGreen;
+              padding: 14px;
+              border-radius: 10px;
+              border: none;
+              background-color: #fff;
+            }
+
+
+          }
+        }
+        .fa-fire {
+           
+
+          &:hover {
+            border: 1px solid;
+            padding: 2px;
+            border-radius: 5px;
+          }
+
+          &:hover .fireHover {
+            display: block;
+          }
+
+          .fireHover {
+            display: none;
+            width: 245px;
+            height: 110px;
+            background-color: $bottleGreen;
+            position: absolute;
+            border-radius: 10px;
+            right: 555px;
+            margin-top: 2px;
+            color: #fff;
+            text-align: center;
+            z-index: 1000;
+
+
+            h2 {
+              border-bottom: 1px dotted #fff;
+              padding: 5px 0px;
+              margin: 10px 20px;
+
+            }
+            
+            p {
+
+              a {
+                text-decloration: none;
+              }
+            }
+          }
+        }
+        .fa-vimeo {
+           
+
+          &:hover {
+            border: 1px solid;
+            padding: 2px;
+            border-radius: 5px;
+          }
+
+          &:hover .vimeoHover {
+            display: block;
+          }
+
+          .vimeoHover {
+            display: none;
+            width: 245px;
+            height: 110px;
+            background-color: $bottleGreen;
+            position: absolute;
+            border-radius: 10px;
+            right: 538px;
+            margin-top: 2px;
+            color: #fff;
+            text-align: center;
+            z-index: 1000;
+
+            h2 {
+              border-bottom: 1px dotted #fff;
+              padding: 5px 0px;
+              margin: 10px 20px;
+
+            }
+
+          }
+        }
+      }
+    }
     
   }
 

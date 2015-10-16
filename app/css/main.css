@@ -1,13 +1,4 @@
 @import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-@import url(http://weloveiconfonts.com/api/?family=brandico);
 html {
   box-sizing: border-box; }
 
@@ -15,33 +6,6 @@ html {
 *::after,
 *::before {
   box-sizing: inherit; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
-
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif; }
 
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
@@ -214,19 +178,136 @@ img {
     border-bottom: 1px solid;
     margin-top: 50px; }
   .menu .itemBlock {
-    width: 700px; }
-    .menu .itemBlock .menuItem {
-      font-size: 16px;
+    width: 700px;
+    border: 1px dotted;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 15px; }
+    .menu .itemBlock .blockLeft {
       display: inline-block; }
-    .menu .itemBlock .menuPrice {
-      font-size: 14px;
-      display: inline-block; }
-    .menu .itemBlock .dotted {
-      width: 400px;
-      border-bottom: 1px dotted;
-      display: inline-block; }
-    .menu .itemBlock .menuDes {
-      font-size: 12px; }
-    .menu .itemBlock .menuIcons {
+      .menu .itemBlock .blockLeft .menuItem {
+        font-size: 16px;
+        display: inline-block; }
+      .menu .itemBlock .blockLeft .menuDes {
+        font-size: 12px; }
+    .menu .itemBlock .blockRight {
       float: right;
-      margin-top: 10px; }
+      display: inline-block;
+      text-align: right; }
+      .menu .itemBlock .blockRight .menuPrice {
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 28px; }
+      .menu .itemBlock .blockRight .priceCup {
+        margin: 0;
+        margin-top: -44px; }
+      .menu .itemBlock .blockRight .priceBowl {
+        margin: 0; }
+      .menu .itemBlock .blockRight .menuIcons:before {
+        content: '';
+        position: absolute;
+        margin-left: -10px;
+        margin-top: -4px;
+        background-color: black;
+        width: 1px;
+        height: 25px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle:hover .exclamationHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 592px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover p {
+          padding: 0px 16px; }
+          .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover p a {
+            text-decloration: none; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star:hover .starHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star .starHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 574px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-star .starHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-star .starHover button {
+          color: #0D3C1E;
+          padding: 14px;
+          border-radius: 10px;
+          border: none;
+          background-color: #fff; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire:hover .fireHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 555px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover p a {
+          text-decloration: none; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo:hover .vimeoHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo .vimeoHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 538px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-vimeo .vimeoHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
