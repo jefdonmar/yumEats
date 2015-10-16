@@ -2,10 +2,13 @@
 <html>
 <head>
   <title>yumEats</title>
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
+  
   <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  
 </head>
 <body>
   <div class='container'>
@@ -25,8 +28,9 @@
         </div>
     </header>
 
-    <div class="main-image"
-      <img src="images/interior3.jpeg">
+    <div id="imgRow">
+    <img id="main-image" src="images/Interior3.jpeg">
+
     </div>
 
     <div class='three-columns'>
@@ -40,12 +44,44 @@
       </div>
     </div>
     
-    <div class='main-body'>
-      <div class='our-story'>
+    <div id='main-body'>
+    <br>
+
+      <div id="dynamicContainer">
+
+        <div class="tabWrapper">
+          <ul class="tabs">
+            <li class="tabLink open" data-tab="tab1">Tab One</li>
+             <li class="tabLink open" data-tab="tab1">Tab Two</li>
+              <li class="tabLink open" data-tab="tab1">Tab Three</li>
+          </ul>
+
+            <div id="tab1" class="tabContent open">
+              Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non.
+            </div>
+            <div id="tab2" class="tabContent">
+              Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non.
+            </div>
+            <div id="tab3" class="tabContent">
+              Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non.
+            </div>
+        </div>
+      </div>
+
+      <div id='foodPhotoContainer'>
+        <div class= "foodPhotos" id="foodPhoto1"> </div>
+        <div class= "foodPhotos" id="foodPhoto2"> </div>
+        <div class= "foodPhotos" id="foodPhoto3"> </div>
+        <div class= "foodPhotos" id="foodPhoto4"> </div>
+        <div class= "foodPhotos" id="foodPhoto5"> </div>
+      </div>
+    </div>
+
         <div class="para1">Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non. Aliquam aliquet augue quis dolor cursus euismod. Nam congue vehicula orci et molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dignissim, urna vitae interdum euismod, arcu nulla pellentesque leo, sit amet ultrices leo est non nisl. Curabitur at velit vel libero volutpat vehicula dignissim quis turpis.</div>
         <img src="http://www.thisisstaffordshire.co.uk/images/localworld/ugc-images/275796/Article/images/19428404/5009050-large.jpg">
         <div class="para2">Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non. Aliquam aliquet augue quis dolor cursus euismod. Nam congue vehicula orci et molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dignissim, urna vitae interdum euismod, arcu nulla pellentesque leo, sit amet ultrices leo est non nisl. Curabitur at velit vel libero volutpat vehicula dignissim quis turpis.</div>
       </div>
+
       <div class='menu'>
         <h1>Our Dinner Selection...</h1>
         <div class="menuBreakfast">
@@ -75,7 +111,21 @@
         <div class="menuVeradesserts">
           <h2 class="section">veraDesserts</h2>
         </div>
-      </div>
+
+<!-- adding this back will make a double menu -->
+    <!--   <div class='menu'>
+        <div class="menuBreakfast"></div>
+        <div class="menuSandwiches"></div>
+        <div class="menuToppings"></div>
+        <div class="menuSides"></div>
+        <div class="menuSalads"></div>
+        <div class="menuSoups"></div>
+        <div class="menuDrinks"></div>
+        <div class="menuDesserts"></div>
+        <div class="menuVeradesserts"></div>
+
+      </div> -->
+      
       <div class='reservations'>
         <ul>
           <li class="fullName">Full Name</li>
@@ -101,10 +151,6 @@
       <div class='reviews'></div>
     </div>
 
-    <aside>
-      <div class='food-photos'></div>
-    </aside>
-       
 
     <footer>
     <br>

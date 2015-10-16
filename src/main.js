@@ -42,14 +42,15 @@
 			<div class="itemBlock">
 				<h2 class="menuItem">${ option.item }</h2>
 				<div class="dotted"></div>
-				<p class="menuPrice">${ prices }</p>
+				<p class="menuPrice">$${ prices }</p>
+				<div class="menuIcons">
+				  <i class="fa fa-exclamation-circle"></i>
+				  <i class="fa fa-star"></i>
+				  <i class="fa fa-fire"></i>
+				  <i class="fa fa-vimeo"></i>
+				</div>
 				<p class="menuDes">${ option.description }</p>
-				<ul>
-					<li class="brandico-allergy"></li>
-					<li class="brandico-favorite"></li>
-					<li class="brandico-spicy"></li>
-					<li class="brandico-vegan"></li>
-				</ul>
+				
 			</div>`;
 	});
 
