@@ -211,20 +211,22 @@ img {
     font-weight: 100; }
   .menu .section {
     font-size: 24px;
-    border-bottom: 1px solid; }
-  .menu .itemBlock .menuItem {
-    font-size: 16px;
-    display: inline-block; }
-  .menu .itemBlock .menuPrice {
-    font-size: 14px;
-    display: inline-block; }
-  .menu .itemBlock .dotted {
-    min-width: 50%;
-    display: inline-block;
-    border-bottom: 1px dotted; }
-  .menu .itemBlock .menuDes {
-    font-size: 12px; }
-  .menu .itemBlock ul {
-    float: right; }
-    .menu .itemBlock ul li {
+    border-bottom: 1px solid;
+    margin-top: 50px; }
+  .menu .itemBlock {
+    width: 700px; }
+    .menu .itemBlock .menuItem {
+      font-size: 16px;
       display: inline-block; }
+    .menu .itemBlock .menuPrice {
+      font-size: 14px;
+      display: inline-block; }
+    .menu .itemBlock .dotted {
+      width: 400px;
+      border-bottom: 1px dotted;
+      display: inline-block; }
+    .menu .itemBlock .menuDes {
+      font-size: 12px; }
+    .menu .itemBlock .menuIcons {
+      float: right;
+      margin-top: 10px; }

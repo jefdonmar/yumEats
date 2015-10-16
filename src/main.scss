@@ -281,10 +281,12 @@ img {
   .section {
     font-size: 24px;
     border-bottom: 1px solid;
+    margin-top: 50px;
 
   }
 
   .itemBlock {
+    width: 700px;
 
     .menuItem {
       font-size: 16px;
@@ -295,24 +297,25 @@ img {
     .menuPrice {
       font-size: 14px;
       display: inline-block;
+
+
     }
 
     .dotted {
-      min-width: 50%;
-      display: inline-block;
+      width: 400px;
       border-bottom: 1px dotted;
+      display: inline-block;
     }
 
     .menuDes {
       font-size: 12px;
+      
     }
 
-    ul {
+    .menuIcons {
+      
       float: right;
-
-      li {
-        display: inline-block;
-      }
+      margin-top: 10px;
     }
 
     

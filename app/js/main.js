@@ -34,7 +34,7 @@
 
 		// For each statement to add to menuBlock var
 		arr.forEach(function (option) {
-			menuBlock += '\n\t\t\t<div class="itemBlock">\n\t\t\t\t<h2 class="menuItem">' + option.item + '</h2>\n\t\t\t\t<div class="dotted"></div>\n\t\t\t\t<p class="menuPrice">' + prices + '</p>\n\t\t\t\t<p class="menuDes">' + option.description + '</p>\n\t\t\t\t<ul>\n\t\t\t\t\t<li class="brandico-allergy"></li>\n\t\t\t\t\t<li class="brandico-favorite"></li>\n\t\t\t\t\t<li class="brandico-spicy"></li>\n\t\t\t\t\t<li class="brandico-vegan"></li>\n\t\t\t\t</ul>\n\t\t\t</div>';
+			menuBlock += '\n\t\t\t<div class="itemBlock">\n\t\t\t\t<h2 class="menuItem">' + option.item + '</h2>\n\t\t\t\t<div class="dotted"></div>\n\t\t\t\t<p class="menuPrice">$' + prices + '</p>\n\t\t\t\t<div class="menuIcons">\n\t\t\t\t  <i class="fa fa-exclamation-circle"></i>\n\t\t\t\t  <i class="fa fa-star"></i>\n\t\t\t\t  <i class="fa fa-fire"></i>\n\t\t\t\t  <i class="fa fa-vimeo"></i>\n\t\t\t\t</div>\n\t\t\t\t<p class="menuDes">' + option.description + '</p>\n\t\t\t\t\n\t\t\t</div>';
 		});
 
 		// Returnable var
