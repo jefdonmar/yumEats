@@ -31,7 +31,7 @@ specialPromise.then( function(spObj){
 });
 
 menuPromise.then( function(obj){
-
+	console.log(obj);
   Object.keys(obj).forEach(function(key) {
     arrMenu = arrMenu.concat(obj[key]);
   });
@@ -42,6 +42,8 @@ menuPromise.then( function(obj){
   <p>${ specialMenuItem.item }</p>
   <p>${ specialMenuItem.price }</p>
   <p>${ specialMenuItem.description }</p>`;
+
+  console.log(specialBlock);
 
   $('#daily-special').append(specialBlock);
 
@@ -135,11 +137,6 @@ menuPromise.then( function(obj){
 	$('.menuVeradesserts').append(veradessertsTemplate);
 
 	}; 
-
-
-
-
-
 
 }());
 

@@ -32,7 +32,7 @@
 	});
 
 	menuPromise.then(function (obj) {
-
+		console.log(obj);
 		Object.keys(obj).forEach(function (key) {
 			arrMenu = arrMenu.concat(obj[key]);
 		});
@@ -40,6 +40,8 @@
 		specialMenuItem = _.findWhere(arrMenu, { id: specialId });
 
 		var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p>' + specialMenuItem.price + '</p>\n  <p>' + specialMenuItem.description + '</p>';
+
+		console.log(specialBlock);
 
 		$('#daily-special').append(specialBlock);
 	});
