@@ -46,17 +46,18 @@ html {
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif; }
 
-body ul, body li {
-  list-style: none; }
+body {
+  width: 940px;
+  margin-left: 160px;
+  margin-right: 160px; }
+  body ul, body li {
+    list-style: none; }
 
 .container {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  width: 940px;
-  margin-left: 160px;
-  margin-right: 160px; }
+  width: 100%; }
   .container:last-child {
     margin-right: 0; }
 
@@ -88,7 +89,6 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
   width: 100%; }
   .three-columns:last-child {
     margin-right: 0; }
@@ -110,17 +110,27 @@ header {
       border: 1px solid #B9B9B9; }
 
 #main-body {
-  clear: both;
-  overflow: hidden; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  background-color: green; }
+  #main-body::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #main-body:last-child {
+    margin-right: 0; }
   #main-body #dynamicContainer {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
-    margin-right: 0;
     background-color: orange;
     height: 1200px;
-    width: 80%;
     float: left; }
     #main-body #dynamicContainer:last-child {
       margin-right: 0; }
