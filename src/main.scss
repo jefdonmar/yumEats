@@ -97,6 +97,10 @@ $apiColor: #EBEBEB;
 
 //-------> Today's Special, Blog and Location Styles <----------
 
+
+
+// Body Styles 
+
 body{
   width: 940px;
   margin-left: 160px;
@@ -108,12 +112,15 @@ body{
 
 }
 
+// Container Styles 
 
 .container {
   @include span-columns(12);
 
 }
-  header{
+
+// Header Styles
+header{
     border-bottom: 1px solid $borderColor;
     height: 115px;
     width: 100%;
@@ -136,20 +143,23 @@ body{
         }
       
     }
-  }
+}
 
-  #imgRow {
-    height: 350px;
-    width: 100%;
-    margin-bottom: 10px;
-    overflow: hidden;
+//Image Row Styles
 
-      #main-image{
-        width: 940px;
-        height: 350px;
-      }
-  }
+#imgRow {
+  height: 350px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
 
+    #main-image{
+      width: 940px;
+      height: 350px;
+    }
+}
+
+//3 API Styles 
   .three-columns{
     @include span-columns(12);
 
@@ -175,17 +185,13 @@ body{
 
   }
 
+// Main body Styles 
+
   #main-body{
     @include outer-container;
     @include span-columns(12);
     background-color: green;
 
-
-
-  footer{
-    border-top: 1px solid $borderColor;
-    margin-bottom: 25px;
-  }
       #dynamicContainer {
          @include span-columns(8 of 12);
          // @include omega ();
@@ -196,6 +202,19 @@ body{
 
          .tabWrapper {
           width: 100%;
+
+          // .tabLink {
+          //   display: none;
+            
+          //   span {
+          //     display: inline-block;
+          //   }
+
+          //   &.open{
+          //     display: block;
+          //   }
+
+          // }
 
           .tab li {
             background: none;
@@ -215,24 +234,27 @@ body{
          }
       }
 
- #foodPhotoContainer{
-  @include span-columns(4);
-  @include omega();
-  border: $borderColor;
-  float: right;
-}
+     #foodPhotoContainer{
+      @include span-columns(4);
+      @include omega();
+      border: $borderColor;
+      float: right;
   
-  .foodPhotos {
-    @include span-columns(4 of 4);
-    @include omega(1n);
-    border: $borderColor;
-    height: 280px;
-    background-color: $apiColor;
-    margin: 0 0 40px 0;
+      .foodPhotos {
+        @include span-columns(4 of 4);
+        @include omega(1n);
+        border: $borderColor;
+        height: 280px;
+        background-color: $apiColor;
+        margin: 0 0 40px 0;
+      }
+    }
   }
 
+
+
     
-    }
+    
 
 // ------- Menu Section ------- //
 
@@ -289,6 +311,11 @@ body{
     
   }
 
+
+ footer{
+    border-top: 1px solid $borderColor;
+    margin-bottom: 25px;
+  }
 }
 // ------- End Menu Section -------//
 

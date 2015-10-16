@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>yumEats</title>
-  
+
   <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
-  
+
 </head>
 <body>
   <div class='container'>
@@ -21,16 +21,11 @@
              <li class="brandico-instagram"></li>
              <li class="brandico-facebook"></li>
              <li class="brandico-twitter"></li>
-             <li class="brandico-opentable"></li>
-             <li class="brandico-yelp"></li>
-             <li class="brandico-flickr"></li>
            </ul>
         </div>
     </header>
-
     <div id="imgRow">
-    <img id="main-image" src="images/Interior3.jpeg">
-
+      <img id="main-image" src="images/Interior3.jpeg">
     </div>
 
     <div class='three-columns'>
@@ -45,18 +40,101 @@
     </div>
     
     <div id='main-body'>
-    <br>
 
       <div id="dynamicContainer">
 
         <div class="tabWrapper">
           <ul class="tabs">
-            <li class="tabLink open" data-tab="tab1">Tab One</li>
-             <li class="tabLink open" data-tab="tab1">Tab Two</li>
-              <li class="tabLink open" data-tab="tab1">Tab Three</li>
+
+            <li data-tab="tab1">
+              <span>Our Story</span>
+              <div class="tabLink open">
+                <div class="para1">Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non. Aliquam aliquet augue quis dolor cursus euismod. Nam congue vehicula orci et molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dignissim, urna vitae interdum euismod, arcu nulla pellentesque leo, sit amet ultrices leo est non nisl. Curabitur at velit vel libero volutpat vehicula dignissim quis turpis.</div>
+                <img src="http://www.thisisstaffordshire.co.uk/images/localworld/ugc-images/275796/Article/images/19428404/5009050-large.jpg">
+                <div class="para2">Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non. Aliquam aliquet augue quis dolor cursus euismod. Nam congue vehicula orci et molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dignissim, urna vitae interdum euismod, arcu nulla pellentesque leo, sit amet ultrices leo est non nisl. Curabitur at velit vel libero volutpat vehicula dignissim quis turpis.</div>
+                </div>
+              </div>
+            </li>
+            
+
+            <li data-tab="tab2">
+              <span>Menu</span>
+              <div class="tabLink">
+                <div class='menu'>
+                  <h1>Our Dinner Selection...</h1>
+                  <div class="menuBreakfast">
+                    <h2 class="section">Breakfast</h2>
+                  </div>
+                  <div class="menuSandwiches">
+                    <h2 class="section">Sandwiches</h2>
+                  </div>
+                  <div class="menuToppings">
+                    <h2 class="section">Toppings</h2>
+                  </div>
+                  <div class="menuSides">
+                    <h2 class="section">Sides</h2>
+                  </div>
+                  <div class="menuSalads">
+                    <h2 class="section">Salads</h2>
+                  </div>
+                  <div class="menuSoups">
+                    <h2 class="section">Soups</h2>
+                  </div>
+                  <div class="menuDrinks">
+                    <h2 class="section">Drinks</h2>
+                  </div>
+                  <div class="menuDesserts">
+                    <h2 class="section">Desserts</h2>
+                  </div>
+                  <div class="menuVeradesserts">
+                    <h2 class="section">veraDesserts</h2>
+                </div>
+              </div>
+            </li>
+
+            <li data-tab="tab3">
+              <span>Reservation</span>
+              <div class="tabLink">
+                <div class='reservations'>
+                  <ul>
+                    <li class="fullName">Full Name</li>
+                    <span>
+                      <input class="blankSpace1"></input>
+                    </span>
+                    <li class="numberofGuests">Number of Guests</li>
+                    <span>
+                      <input class="blankSpace2"></input>
+                    </span>
+                    <li class="date">Date</li>
+                    <span>
+                      <input class="blankSpace3"></input>
+                    </span>
+                    <li class="specialNotes">Special Notes</li>
+                    <span>
+                      <input class="blankSpace4"></input>
+                    </span>
+                    <li class="seatingPreferance">Seating Preferance</li> 
+                      <select class="seatingOption">
+                        <option>Indoor</option>
+                        <option>Outdoor</option>
+                      </select>
+                  </ul>
+                  <button class="reserveButton">Reserve Table</button>
+                </div>
+              </div>
+            </li>
+
+            <li data-tab="tab4">
+              <span>Review</span>
+              <div class="tabLink">
+                <div class='reviews'>
+                </div>
+              </div>
+            </li>
+
           </ul>
 
-            <div id="tab1" class="tabContent open">
+            <!-- <div id="tab1" class="tabContent open">
               Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non.
             </div>
             <div id="tab2" class="tabContent">
@@ -65,6 +143,9 @@
             <div id="tab3" class="tabContent">
               Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non.
             </div>
+            <div id="tab4" class="tabContent">
+              Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non.
+            </div> -->
         </div>
       </div>
 
@@ -77,95 +158,19 @@
       </div>
     </div>
 
-        <div class="para1">Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non. Aliquam aliquet augue quis dolor cursus euismod. Nam congue vehicula orci et molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dignissim, urna vitae interdum euismod, arcu nulla pellentesque leo, sit amet ultrices leo est non nisl. Curabitur at velit vel libero volutpat vehicula dignissim quis turpis.</div>
-        <img src="http://www.thisisstaffordshire.co.uk/images/localworld/ugc-images/275796/Article/images/19428404/5009050-large.jpg">
-        <div class="para2">Duis mollis pulvinar volutpat. Duis aliquam laoreet erat id ornare. Pellentesque interdum convallis urna, sed aliquam felis malesuada sed. Duis ex turpis, commodo id blandit at, aliquet et quam. Phasellus eleifend lorem dolor, ac pulvinar nisi tempus non. Aliquam aliquet augue quis dolor cursus euismod. Nam congue vehicula orci et molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dignissim, urna vitae interdum euismod, arcu nulla pellentesque leo, sit amet ultrices leo est non nisl. Curabitur at velit vel libero volutpat vehicula dignissim quis turpis.</div>
-      </div>
-
-      <div class='menu'>
-        <h1>Our Dinner Selection...</h1>
-        <div class="menuBreakfast">
-          <h2 class="section">Breakfast</h2>
-        </div>
-        <div class="menuSandwiches">
-          <h2 class="section">Sandwiches</h2>
-        </div>
-        <div class="menuToppings">
-          <h2 class="section">Toppings</h2>
-        </div>
-        <div class="menuSides">
-          <h2 class="section">Sides</h2>
-        </div>
-        <div class="menuSalads">
-          <h2 class="section">Salads</h2>
-        </div>
-        <div class="menuSoups">
-          <h2 class="section">Soups</h2>
-        </div>
-        <div class="menuDrinks">
-          <h2 class="section">Drinks</h2>
-        </div>
-        <div class="menuDesserts">
-          <h2 class="section">Desserts</h2>
-        </div>
-        <div class="menuVeradesserts">
-          <h2 class="section">veraDesserts</h2>
-        </div>
-
-<!-- adding this back will make a double menu -->
-    <!--   <div class='menu'>
-        <div class="menuBreakfast"></div>
-        <div class="menuSandwiches"></div>
-        <div class="menuToppings"></div>
-        <div class="menuSides"></div>
-        <div class="menuSalads"></div>
-        <div class="menuSoups"></div>
-        <div class="menuDrinks"></div>
-        <div class="menuDesserts"></div>
-        <div class="menuVeradesserts"></div>
-
-      </div> -->
-      
-      <div class='reservations'>
-        <ul>
-          <li class="fullName">Full Name</li>
-          <span>
-            <input class="blankSpace1"></input>
-          </span>
-          <li class="numberofGuests">Number of Guests</li>
-          <span>
-            <input class="blankSpace2"></input>
-          </span>
-        <li class="date">Date</li>
-          <span><input class="blankSpace3"></input></span>
-        <li class="specialNotes">Special Notes</li>
-          <span><input class="blankSpace4"></input></span>
-        <li class="seatingPreferance">Seating Preferance</li> 
-          <select class="seatingOption">
-            <option>Indoor</option>
-            <option>Outdoor</option>
-          </select>
-        </ul>
-        <button class="reserveButton">Reserve Table</button>
-      </div>
-      <div class='reviews'></div>
-    </div>
-
-
     <footer>
-    <br>
-    <br>
-    &copy;2015 yumEats
-    </footer>
-
+      <br>
+      <br>
+      &copy;2015 yumEats
+    </footer>  
   </div>
+
 
   <script type="text/template" id="blog-post">
     <p><%= title %></p>
     <p><%= date_published %></p>
     <p><%= post %></p>
   </script>
-
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>

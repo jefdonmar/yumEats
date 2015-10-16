@@ -116,3 +116,5 @@
 		$('#daily-special').append(specialBlock);
 	});
 })();
+
+//Jeff and Cori's Dynamic tab Code

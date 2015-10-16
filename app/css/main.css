@@ -124,9 +124,6 @@ header {
     display: table; }
   #main-body:last-child {
     margin-right: 0; }
-  #main-body footer {
-    border-top: 1px solid #B9B9B9;
-    margin-bottom: 25px; }
   #main-body #dynamicContainer {
     float: left;
     display: block;
@@ -159,21 +156,21 @@ header {
     float: right; }
     #main-body #foodPhotoContainer:last-child {
       margin-right: 0; }
-  #main-body .foodPhotos {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 100%;
-    border: #B9B9B9;
-    height: 280px;
-    background-color: #EBEBEB;
-    margin: 0 0 40px 0; }
-    #main-body .foodPhotos:last-child {
-      margin-right: 0; }
-    #main-body .foodPhotos:nth-child(1n) {
-      margin-right: 0; }
-    #main-body .foodPhotos:nth-child(1n+1) {
-      clear: left; }
+    #main-body #foodPhotoContainer .foodPhotos {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%;
+      border: #B9B9B9;
+      height: 280px;
+      background-color: #EBEBEB;
+      margin: 0 0 40px 0; }
+      #main-body #foodPhotoContainer .foodPhotos:last-child {
+        margin-right: 0; }
+      #main-body #foodPhotoContainer .foodPhotos:nth-child(1n) {
+        margin-right: 0; }
+      #main-body #foodPhotoContainer .foodPhotos:nth-child(1n+1) {
+        clear: left; }
 
 .menu {
   max-width: 700px; }
@@ -202,3 +199,6 @@ header {
     .menu .itemBlock .menuIcons {
       float: right;
       margin-top: 10px; }
+  .menu footer {
+    border-top: 1px solid #B9B9B9;
+    margin-bottom: 25px; }
