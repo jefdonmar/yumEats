@@ -112,7 +112,7 @@
 
 		specialMenuItem = _.findWhere(arrMenu, { id: specialId });
 
-		var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p>' + specialMenuItem.price + '</p>\n  <p>' + specialMenuItem.description + '</p>';
+		var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p class=\'special-price\'>' + specialMenuItem.price + '</p>\n  <img class=\'special-food\' src=\'../images/nuggets.jpg\'>\n  <p>' + specialMenuItem.description + '</p>';
 
 		$('#daily-special').append(specialBlock);
 	});
@@ -120,6 +120,10 @@
 	// Tab JS Code (cori and jeff)
 
 	$('.tab1').on('click', function () {
+		$('.tab1').toggleClass('clicked');
+		$('.tab2').removeClass('clicked');
+		$('.tab3').removeClass('clicked');
+		$('.tab4').removeClass('clicked');
 		$('.tabLink1').removeClass('close').addClass('open');
 		$('.tabLink2').removeClass('open').addClass('close');
 		$('.tabLink3').removeClass('open').addClass('close');
@@ -127,6 +131,10 @@
 	});
 
 	$('.tab2').on('click', function () {
+		$('.tab2').toggleClass('clicked');
+		$('.tab1').removeClass('clicked');
+		$('.tab3').removeClass('clicked');
+		$('.tab4').removeClass('clicked');
 		$('.tabLink2').removeClass('close').addClass('open');
 		$('.tabLink1').removeClass('open').addClass('close');
 		$('.tabLink3').removeClass('open').addClass('close');
@@ -134,6 +142,10 @@
 	});
 
 	$('.tab3').on('click', function () {
+		$('.tab3').toggleClass('clicked');
+		$('.tab1').removeClass('clicked');
+		$('.tab2').removeClass('clicked');
+		$('.tab4').removeClass('clicked');
 		$('.tabLink3').removeClass('close').addClass('open');
 		$('.tabLink1').removeClass('open').addClass('close');
 		$('.tabLink2').removeClass('open').addClass('close');
@@ -141,6 +153,10 @@
 	});
 
 	$('.tab4').on('click', function () {
+		$('.tab4').toggleClass('clicked');
+		$('.tab1').removeClass('clicked');
+		$('.tab2').removeClass('clicked');
+		$('.tab3').removeClass('clicked');
 		$('.tabLink4').removeClass('close').addClass('open');
 		$('.tabLink2').removeClass('open').addClass('close');
 		$('.tabLink3').removeClass('open').addClass('close');

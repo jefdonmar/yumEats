@@ -1,14 +1,35 @@
 
 $borderColor: #B9B9B9;
 $apiColor: #EBEBEB;
-$bottleGreen: #0D3C1E;
 
 @import "bourbon/bourbon";
 @import "neat/neat";
 
 //-------> Social Media Icon <----------------------
 
-//  Icon
+// Icon info - clarify which in class name (see example below)
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
+// <!-- how to do Single Element in HTML-->
+// <span class="brandico-instagram"></span>
+
+// <!-- how to Group of Elements in HTML -->
+// <ul>
+//   <li class="brandico-instagram"></li>
+//   <li class="brandico-facebook"></li>
+//   <li class="brandico-twitter"></li>
+//   <li class="brandico-opentable"></li>
+//   <li class="brandico-yelp"></li>
+//   <li class="brandico-flickr"></li>
+// </ul>
+
+
+//----------> Menu Icons <-------------
+
+//Spicy Icon
 @import url(http://weloveiconfonts.com/api/?family=brandico);
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif;
@@ -29,9 +50,8 @@ $bottleGreen: #0D3C1E;
 //-------> Today's Special, Blog and Location Styles <----------
 
 body{
-  width: 940px;
-  margin-left: 160px;
-  margin-right: 160px;
+  width: 85%;
+  margin: 0 auto;
 
   ul,li{
     list-style: none;
@@ -43,7 +63,6 @@ body{
 .container {
   @include span-columns(12);
 
-}
   header{
     border-bottom: 1px solid $borderColor;
     height: 115px;
@@ -61,9 +80,12 @@ body{
     .social-media-icons{
       display: inline-block;
       float: right;
+      padding: 5px;
 
         ul li{
           list-style: none;
+          display: inline-block;
+          padding: 10px;
         }
       
     }
@@ -85,10 +107,9 @@ body{
     @include span-columns(12);
 
     .glance {
-      @include span-columns(4 of 12);
-      border: $borderColor;
+      @include span-columns(4);
+      // border: 1px solid $borderColor;
       background-color: $apiColor;
-
 
       #latest-news{
         border: 1px solid $borderColor;
@@ -97,6 +118,19 @@ body{
       #daily-special{
         @include omega ();
         border: 1px solid $borderColor;
+      }
+        
+      .special-food {
+        height: 150px;
+      }
+
+      p {
+        display: inline-block;
+        margin: 10px;
+      }
+      
+      .special-price {
+        margin-left: 50%;
       }
 
       #location{
@@ -109,38 +143,45 @@ body{
   #main-body{
     @include outer-container;
     @include span-columns(12);
-    background-color: green;
-
-
 
   footer{
     border-top: 1px solid $borderColor;
-    margin-bottom: 25px;
   }
+
+  
       #dynamicContainer {
-         @include span-columns(8 of 12);
+         @include span-columns(8);
          @include omega ();
 
-         background-color: orange;
-         height: 1200px;
          float: left;
 
          .tabWrapper {
           width: 100%;
 
           .tabs {
-            background: none;
-            background-color: pink;
             display: inline-block;
             padding: 10px 15px;
             cursor: pointer;
+          };
+
+          .tabContainer{
+            padding: 5px;
           }
 
           .tabContainer p {
+            border-bottom: 1px solid $borderColor;
             display: inline-block;
-          }
+            padding: 10px;
+            width: 20%;
 
+            &.clicked {
+              border-top: 1px solid $borderColor;
+              border-left: 1px solid $borderColor;
+              border-right: 1px solid $borderColor;
+              border-bottom: none;
+            }
           }
+        }
 
         .open {
           display: block;
@@ -152,388 +193,260 @@ body{
 
       }
 
- #foodPhotoContainer{
-  @include span-columns(4);
-  @include omega();
-  border: $borderColor;
-  float: right;
-}
+   #foodPhotoContainer{
+    @include span-columns(4);
+    @include omega();
+    border: $borderColor;
+    float: right;
+   }
   
   .foodPhotos {
     @include span-columns(4 of 4);
     @include omega(1n);
-    border: $borderColor;
+    border: 1px solid $borderColor;
     height: 280px;
     background-color: $apiColor;
     margin: 0 0 40px 0;
   }
 
     
-    }
+  }
+}
 
-//////////////////////////////////
 // ------- Menu Section ------- //
-//////////////////////////////////
 
 // Main body of menu
 .menu {
-  max-width: 700px;
-
-  h1 {
+  max-width: 700px; }
+  .menu h1 {
     font-size: 24px;
     border-bottom: 1px solid;
-    font-weight: 100;
-  }
-
-  // Class for each section header 
-  .section {
+    font-weight: 100; }
+  .menu .section {
     font-size: 24px;
     border-bottom: 1px solid;
-    margin-top: 50px;
-
-  }
-
-  .itemBlock {
+    margin-top: 50px; }
+  .menu .itemBlock {
     width: 700px;
     border: 1px dotted;
     border-radius: 5px;
     margin-bottom: 10px;
-    padding: 5px 15px;
-
-
-    .blockLeft {
-      display: inline-block;
-      
-
-      .menuItem {
+    padding: 5px 15px; }
+    .menu .itemBlock .blockLeft {
+      display: inline-block; }
+      .menu .itemBlock .blockLeft .menuItem {
         font-size: 16px;
-        display: inline-block;
-
-      }
-
-      .menuDes {
-        font-size: 12px;
-        
-      }
-    }
-
-    .blockRight {
+        display: inline-block; }
+      .menu .itemBlock .blockLeft .menuDes {
+        font-size: 12px; }
+    .menu .itemBlock .blockRight {
       float: right;
       display: inline-block;
-      text-align: right;
-
-      .menuPrice {
+      text-align: right; }
+      .menu .itemBlock .blockRight .menuPrice {
         font-size: 14px;
         display: inline-block;
-        margin-bottom: 28px;
-      }
-
-      .priceCup {
+        margin-bottom: 28px; }
+      .menu .itemBlock .blockRight .priceCup {
         margin: 0;
-        margin-top: -44px;
-      }
-      .priceBowl {
-        margin: 0;
-      }
-
-      .menuIcons {
-
-        &:before {
-          content: '';
-          position: absolute;
-          margin-left: -10px;
-          margin-top: -4px;
-          background-color: black;
-          width: 1px;
-          height: 25px;
-        }
-
-        .fa-exclamation-circle {
-          
-          
-          &:hover {
-            border: 1px solid;
-            padding: 2px;
-            border-radius: 5px;
-
-          }
-
-          &:hover .exclamationHover {
-            display: block;
-          }
-
-          .exclamationHover {
-            display: none;
-            width: 245px;
-            height: 110px;
-            background-color: $bottleGreen;
-            position: absolute;
-            border-radius: 10px;
-            right: 592px;
-            margin-top: 2px;
-            color: #fff;
-            text-align: center;
-            z-index: 1000;
-
-            h2 {
-              border-bottom: 1px dotted #fff;
-              padding: 5px 0px;
-              margin: 10px 20px;
-
-
-    .menuIcons {
-      
-      float: right;
-      margin-top: 10px;
-
-            }
-
-            p {
-              padding: 0px 16px;
-              a {
-                text-decloration: none;
-              }
-            }
-
-
-
-          }
-        }
-        .fa-star {
-           
-
-          &:hover {
-            border: 1px solid;
-            padding: 2px;
-            border-radius: 5px;
-          }
-
-          &:hover .starHover {
-            display: block;
-          }
-
-          .starHover {
-            display: none;
-            width: 245px;
-            height: 110px;
-            background-color: $bottleGreen;
-            position: absolute;
-            border-radius: 10px;
-            right: 574px;
-            margin-top: 2px;
-            color: #fff;
-            text-align: center;
-            z-index: 1000;
-
-
-            h2 {
-              border-bottom: 1px dotted #fff;
-              padding: 5px 0px;
-              margin: 10px 20px;
-
-            }
-
-            button {
-              color: $bottleGreen;
-              padding: 14px;
-              border-radius: 10px;
-              border: none;
-              background-color: #fff;
-            }
-
-
-          }
-        }
-        .fa-fire {
-           
-
-          &:hover {
-            border: 1px solid;
-            padding: 2px;
-            border-radius: 5px;
-          }
-
-          &:hover .fireHover {
-            display: block;
-          }
-
-          .fireHover {
-            display: none;
-            width: 245px;
-            height: 110px;
-            background-color: $bottleGreen;
-            position: absolute;
-            border-radius: 10px;
-            right: 555px;
-            margin-top: 2px;
-            color: #fff;
-            text-align: center;
-            z-index: 1000;
+        margin-top: -44px; }
+      .menu .itemBlock .blockRight .priceBowl {
+        margin: 0; }
+      .menu .itemBlock .blockRight .menuIcons:before {
+        content: '';
+        position: absolute;
+        margin-left: -10px;
+        margin-top: -4px;
+        background-color: black;
+        width: 1px;
+        height: 25px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle:hover .exclamationHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 592px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover p {
+          padding: 0px 16px; }
+          .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover p a {
+            text-decloration: none; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star:hover .starHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star .starHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 574px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-star .starHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-star .starHover button {
+          color: #0D3C1E;
+          padding: 14px;
+          border-radius: 10px;
+          border: none;
+          background-color: #fff; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire:hover .fireHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 555px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover p a {
+          text-decloration: none; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo:hover .vimeoHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo .vimeoHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 538px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-vimeo .vimeoHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
 
 
-            h2 {
-              border-bottom: 1px dotted #fff;
-              padding: 5px 0px;
-              margin: 10px 20px;
-
-            }
-            
-            p {
-
-              a {
-                text-decloration: none;
-              }
-            }
-          }
-        }
-        .fa-vimeo {
-           
-
-          &:hover {
-            border: 1px solid;
-            padding: 2px;
-            border-radius: 5px;
-          }
-
-          &:hover .vimeoHover {
-            display: block;
-          }
-
-          .vimeoHover {
-            display: none;
-            width: 245px;
-            height: 110px;
-            background-color: $bottleGreen;
-            position: absolute;
-            border-radius: 10px;
-            right: 538px;
-            margin-top: 2px;
-            color: #fff;
-            text-align: center;
-            z-index: 1000;
-
-            h2 {
-              border-bottom: 1px dotted #fff;
-              padding: 5px 0px;
-              margin: 10px 20px;
-
-            }
-
-          }
-        }
-      }
-    }
-    
-  }
-
-}
 // ------- End Menu Section -------//
 
+// Our Story and Reservation Sections from Amit
 
-  //       .our-story {
-  //         margin-left: 150px;
-  //         padding-top: 20px;
-  //         width: 670px;
-  //       }
-  //       .para1 {
-  //         font-size: 14px;
-  //         width: 100%;
-  //         line-height: 20px;
-  //         font-family: 'Walter Turncoat', cursive;
-  //         color: #0D3C1E;
+.para {
+  font-size: 14px;
+  width: 100%;
+  line-height: 20px;
+  margin: 0;
+}
 
-  //       }
-  //       .para2 {
-  //         font-size: 14px;
-  //         width: 100%;
-  //         line-height: 20px;
-  //         padding-top: 10px;
-  //         font-family: 'Walter Turncoat', cursive;
-  //         color: #0D3C1E;
-  //       }
-  //       img {
-  //         width: 100%;
-  //         padding-top: 10px;
-  //       }
-  //       .reservations {
-  //         margin-left: 110px;
-  //       }
+img {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-  //       .reservations ul li {
-  //         list-style: none;
-  //         font-size: 16px;
-  //       }
-  //       .reservationsTab {
-  //         font-weight: bold;
-  //       }
-  //       .fullName {
-  //         font-family: 'Shadows Into Light', cursive;
-  //         color: #00A16E;
-  //       }
-  //       .blankSpace1 {
-  //         background-color: gray;
-  //         color: black;
-  //         width: 300px;
-  //         height: 30px;
-  //         margin-top: 15px;
-  //       }
-  //       .numberofGuests {
-  //         padding-top: 20px;
-  //         font-family: 'Shadows Into Light', cursive;
-  //         color: #00A16E;
-  //       }
-  //       .blankSpace2 {
-  //         background-color: gray;
-  //         color: black;
-  //         width: 100px;
-  //         height: 30px;
-  //         margin-top: 15px;
-  //       }
-  //       .date {
-  //         padding-top: 20px;
-  //         font-family: 'Shadows Into Light', cursive;
-  //         color: #00A16E;
-  //       }
-  //       .blankSpace3 {
-  //         background-color: gray;
-  //         color: black;
-  //         width: 100px;
-  //         height: 30px;
-  //         margin-top: 15px;
-  //       }
-  //       .specialNotes {
-  //         padding-top: 20px;
-  //         font-family: 'Shadows Into Light', cursive;
-  //         color: #00A16E;
-  //       }
-  //       .blankSpace4 {
-  //         background-color: gray;
-  //         color: black;
-  //         width: 400px;
-  //         height: 80px;
-  //         margin-top: 15px;
-  //       }
-  //       .seatingPreferance {
-  //         padding-top: 20px;
-  //         font-family: 'Shadows Into Light', cursive;
-  //         color: #00A16E;
-  //       }
-  //       .seatingOption  {
-  //         margin-top: 10px;
-  //         width: 105px;
-  //         font-family: 'Shadows Into Light', cursive;
-  //         color: #00A16E;
-  //       }
-  //       .reserveButton {
-  //         background-color: black;
-  //         width: 150px;
-  //         height: 50px;
-  //         margin-left: 145px;
-  //         font-family: 'Shadows Into Light', cursive;
-  //         color: #00A16E;
-  //       }
+.reservations ul li {
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+}
+.reservationsTab {
+  font-weight: bold;
+}
+.fullName {
+  color: #00A16E;
+}
+.blankSpace1 {
+  background-color: gray;
+  color: black;
+  width: 300px;
+  height: 30px;
+  margin-top: 15px;
+}
+.numberofGuests {
+  padding-top: 20px;
+  color: #00A16E;
+}
+.blankSpace2 {
+  background-color: gray;
+  color: black;
+  width: 100px;
+  height: 30px;
+  margin-top: 15px;
+}
+.date {
+  padding-top: 20px;
+  color: #00A16E;
+}
+.blankSpace3 {
+  background-color: gray;
+  color: black;
+  width: 100px;
+  height: 30px;
+  margin-top: 15px;
+}
+.specialNotes {
+  padding-top: 20px;
+  color: #00A16E;
+}
+.blankSpace4 {
+  background-color: gray;
+  color: black;
+  width: 400px;
+  height: 80px;
+  margin-top: 15px;
+}
+.seatingPreferance {
+  padding-top: 20px;
+  color: #00A16E;
+}
+.seatingOption  {
+  margin-top: 10px;
+  width: 105px;
+  color: #00A16E;
+}
+.reserveButton {
+  background-color: black;
+  width: 150px;
+  height: 50px;
+  margin-left: 145px;
+  color: #00A16E;
+}
 
-  // }
 
 
 
