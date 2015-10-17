@@ -95,8 +95,6 @@ body {
       display: table; }
     .container #main-body:last-child {
       margin-right: 0; }
-    .container #main-body footer {
-      border-top: 1px solid #B9B9B9; }
     .container #main-body #dynamicContainer {
       float: left;
       display: block;

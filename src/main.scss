@@ -143,11 +143,6 @@ body{
   #main-body{
     @include outer-container;
     @include span-columns(12);
-
-  footer{
-    border-top: 1px solid $borderColor;
-  }
-
   
       #dynamicContainer {
          @include span-columns(8);
