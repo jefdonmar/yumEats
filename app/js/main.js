@@ -1,8 +1,9 @@
 'use strict';
 
 (function () {
-
+	/////////////////////////////////////////////////////////////
 	// ----------------- Isaac javaScript -------------------- //
+	/////////////////////////////////////////////////////////////
 
 	// Var set to our URL and the URL for our getJSON method
 	var menuUrl = "https://json-data.herokuapp.com/restaurant/menu/2";
@@ -24,17 +25,17 @@
 		arr.forEach(function (option) {
 
 			if (option.price.cup) {
-				prices = '\n\t\t\t<p class="priceCup">' + option.price.cup + '</p>\n\t\t\t<p class="priceBowl">' + option.price.bowl + '</p>';
+				prices = '\n\t\t\t<p class="priceCup">cup:$' + option.price.cup + ' </p>\n\t\t\t<p class="priceBowl">bowl:$' + option.price.bowl + '</p>';
 			} else if (option.price.small) {
-				prices = '\n\t\t\t<p class="priceSmall">' + option.price.small + '</p>\n\t\t\t<p class="priceLarge">' + option.price.large + '</p>';
+				prices = '\n\t\t\t<p class="priceSmall">sm:$' + option.price.small + ' </p>\n\t\t\t<p class="priceLarge">lg:$' + option.price.large + '</p>';
 			} else {
-				prices = '' + option.price;
+				prices = '$' + option.price;
 			}
 		});
 
 		// For each statement to add to menuBlock var
 		arr.forEach(function (option) {
-			menuBlock += '\n\t\t\t<div class="itemBlock">\n\t\t\t\t<h2 class="menuItem">' + option.item + '</h2>\n\t\t\t\t<div class="dotted"></div>\n\t\t\t\t<p class="menuPrice">$' + prices + '</p>\n\t\t\t\t<div class="menuIcons">\n\t\t\t\t  <i class="fa fa-exclamation-circle"></i>\n\t\t\t\t  <i class="fa fa-star"></i>\n\t\t\t\t  <i class="fa fa-fire"></i>\n\t\t\t\t  <i class="fa fa-vimeo"></i>\n\t\t\t\t</div>\n\t\t\t\t<p class="menuDes">' + option.description + '</p>\n\t\t\t\t\n\t\t\t</div>';
+			menuBlock += '\n\t\t\t<div class="itemBlock">\n\t\t\t\t<div class="blockLeft">\n\t\t\t\t\t<h2 class="menuItem">' + option.item + '</h2>\n\t\t\t\t\t<p class="menuDes">~ ' + option.description + '</p>\n\t\t\t\t</div>\n\t\t\t\t<div class="blockRight">\n\t\t\t\t\t<p class="menuPrice">' + prices + '</p>\n\t\t\t\t\t<div class="menuIcons">\n\t\t\t\t\t  <i class="fa fa-exclamation-circle"><div class="exclamationHover"><h2>Food Allergies</h2><p>Click <a href="#">HERE</a> for the list of ingredients.</p></div></i>\n\t\t\t\t\t  <i class="fa fa-star"><div class="starHover"><h2>Favorite</h2><button href="#">Add to Favorites</button></div></i>\n\t\t\t\t\t  <i class="fa fa-fire"><div class="fireHover"><h2>Spicy</h2><p>Click <a href="#">HERE</a> for spice level!</p></div></i>\n\t\t\t\t\t  <i class="fa fa-vimeo"><div class="vimeoHover"><h2>Vegan</h2><p>Eat more bacon...Seriously.</p></div></i>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t\n\t\t\t</div>';
 		});
 
 		// Returnable var
@@ -70,7 +71,9 @@
 		$('.menuVeradesserts').append(veradessertsTemplate);
 	};
 
-	// Cori's Javascript
+	/////////////////////////////////////////////////////////////
+	// ----------------- Cori's javaScript ------------------- //
+	/////////////////////////////////////////////////////////////
 
 	// Blog JS Code for "Latest News" section
 

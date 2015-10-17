@@ -1,6 +1,7 @@
 (function () {
-
+/////////////////////////////////////////////////////////////
 // ----------------- Isaac javaScript -------------------- //
+/////////////////////////////////////////////////////////////
 	
 	// Var set to our URL and the URL for our getJSON method
 	let menuUrl = "https://json-data.herokuapp.com/restaurant/menu/2";
@@ -23,14 +24,14 @@
 		
 		if (option.price.cup) {
 			prices =`
-			<p class="priceCup">${ option.price.cup }</p>
-			<p class="priceBowl">${ option.price.bowl }</p>`;
+			<p class="priceCup">cup:$${ option.price.cup } </p>
+			<p class="priceBowl">bowl:$${ option.price.bowl }</p>`;
 		} else if (option.price.small) {
 			prices =`
-			<p class="priceSmall">${ option.price.small }</p>
-			<p class="priceLarge">${ option.price.large }</p>`;
+			<p class="priceSmall">sm:$${ option.price.small } </p>
+			<p class="priceLarge">lg:$${ option.price.large }</p>`;
 		} else {
-			prices = `${ option.price }`;
+			prices = `$${ option.price }`;
 		}
 
 	});
@@ -40,16 +41,20 @@
 	arr.forEach(function(option) {
 			menuBlock += `
 			<div class="itemBlock">
-				<h2 class="menuItem">${ option.item }</h2>
-				<div class="dotted"></div>
-				<p class="menuPrice">$${ prices }</p>
-				<div class="menuIcons">
-				  <i class="fa fa-exclamation-circle"></i>
-				  <i class="fa fa-star"></i>
-				  <i class="fa fa-fire"></i>
-				  <i class="fa fa-vimeo"></i>
+				<div class="blockLeft">
+					<h2 class="menuItem">${ option.item }</h2>
+					<p class="menuDes">~ ${ option.description }</p>
 				</div>
-				<p class="menuDes">${ option.description }</p>
+				<div class="blockRight">
+					<p class="menuPrice">${ prices }</p>
+					<div class="menuIcons">
+					  <i class="fa fa-exclamation-circle"><div class="exclamationHover"><h2>Food Allergies</h2><p>Click <a href="#">HERE</a> for the list of ingredients.</p></div></i>
+					  <i class="fa fa-star"><div class="starHover"><h2>Favorite</h2><button href="#">Add to Favorites</button></div></i>
+					  <i class="fa fa-fire"><div class="fireHover"><h2>Spicy</h2><p>Click <a href="#">HERE</a> for spice level!</p></div></i>
+					  <i class="fa fa-vimeo"><div class="vimeoHover"><h2>Vegan</h2><p>Eat more bacon...Seriously.</p></div></i>
+					</div>
+				</div>
+				
 				
 			</div>`;
 	});
@@ -90,8 +95,9 @@
 
 	}; 
 
-
-// Cori's Javascript 
+/////////////////////////////////////////////////////////////
+// ----------------- Cori's javaScript ------------------- //
+/////////////////////////////////////////////////////////////
 
 // Blog JS Code for "Latest News" section
 
