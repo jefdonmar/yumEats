@@ -116,4 +116,34 @@
 
 		$('#daily-special').append(specialBlock);
 	});
+
+	// Tab JS Code (cori and jeff)
+
+	$('.tab1').on('click', function () {
+		$('.tabLink1').removeClass('close').addClass('open');
+		$('.tabLink2').removeClass('open').addClass('close');
+		$('.tabLink3').removeClass('open').addClass('close');
+		$('.tabLink4').removeClass('open').addClass('close');
+	});
+
+	$('.tab2').on('click', function () {
+		$('.tabLink2').removeClass('close').addClass('open');
+		$('.tabLink1').removeClass('open').addClass('close');
+		$('.tabLink3').removeClass('open').addClass('close');
+		$('.tabLink4').removeClass('open').addClass('close');
+	});
+
+	$('.tab3').on('click', function () {
+		$('.tabLink3').removeClass('close').addClass('open');
+		$('.tabLink1').removeClass('open').addClass('close');
+		$('.tabLink2').removeClass('open').addClass('close');
+		$('.tabLink4').removeClass('open').addClass('close');
+	});
+
+	$('.tab4').on('click', function () {
+		$('.tabLink4').removeClass('close').addClass('open');
+		$('.tabLink2').removeClass('open').addClass('close');
+		$('.tabLink3').removeClass('open').addClass('close');
+		$('.tabLink1').removeClass('open').addClass('close');
+	});
 })();

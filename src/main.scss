@@ -119,7 +119,7 @@ body{
   }
       #dynamicContainer {
          @include span-columns(8 of 12);
-         // @include omega ();
+         @include omega ();
 
          background-color: orange;
          height: 1200px;
@@ -128,7 +128,7 @@ body{
          .tabWrapper {
           width: 100%;
 
-          .tab li {
+          .tabs {
             background: none;
             background-color: pink;
             display: inline-block;
@@ -136,14 +136,20 @@ body{
             cursor: pointer;
           }
 
-          .tab li.open {
-            background: white;
+          .tabContainer p {
+            display: inline-block;
           }
 
-          .tabContent.open{
-            display: block;
           }
-         }
+
+        .open {
+          display: block;
+        }
+
+        .close {
+            display: none;
+        }
+
       }
 
  #foodPhotoContainer{
