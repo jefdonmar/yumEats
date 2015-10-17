@@ -98,42 +98,102 @@ body{
     overflow: hidden;
 
       #main-image{
-        width: 940px;
+        width: 100%;
         height: 350px;
       }
   }
 
   .three-columns{
     @include span-columns(12);
+    margin-bottom: 30px;
 
     .glance {
       @include span-columns(4);
-      // border: 1px solid $borderColor;
+      border: 1px solid #B9B9B9;
       background-color: $apiColor;
+      height: 300px;
+      text-overflow: "...";
+      overflow: hidden;
 
-      #latest-news{
-        border: 1px solid $borderColor;
+      hr {
+        margin-left: 15px;
+        margin-right: 15px;
       }
 
-      #daily-special{
-        @include omega ();
-        border: 1px solid $borderColor;
+      h3 {
+        font-size: 15px;
+        margin-left: 20px;
       }
-        
-      .special-food {
-        height: 150px;
-      }
-
       p {
         display: inline-block;
-        margin: 10px;
+        font-size: 12px;
+        margin: 10px 20px;
       }
-      
-      .special-price {
-        margin-left: 50%;
+      span {
+        font-size: 12px;
+        margin-left: 15%;
+      }
+      img, iframe {
+          width: 90%;
+          margin-left: 5%;
+          height: 180px;
+        }
+
+      #latest-news{
+        border: 1px solid $borderColor;   
+
+
+      }
+      p#blogTitle {
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
       }
 
-      #location{
+      p#blogDate {
+        float: right;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      #blogPost {
+        font-size: 11px;
+      }
+
+      #daily-special {
+        @include omega ();
+        border: 1px solid $borderColor;
+
+
+
+      }
+      .special-text{
+        margin-top: -12px;
+
+        .special-food {
+
+        }  
+        .special-price {
+          float: right;
+          font-size: 13px;
+          font-weight: bold;
+        }      
+        .special-des {
+          display: block;
+          font-size: 11px;
+        }
+          
+        
+        .special-item {
+          font-size: 14px;
+          font-weight: bold;
+        }
+    }
+      
+        
+      
+
+      #location {
         border: 1px solid $borderColor;
       }
     }

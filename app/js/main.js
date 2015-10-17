@@ -112,7 +112,7 @@
 
 		specialMenuItem = _.findWhere(arrMenu, { id: specialId });
 
-		var specialBlock = '\n  <p>' + specialMenuItem.item + '</p>\n  <p class=\'special-price\'>' + specialMenuItem.price + '</p>\n  <img class=\'special-food\' src=\'../images/nuggets.jpg\'>\n  <p>' + specialMenuItem.description + '</p>';
+		var specialBlock = '\n\t  <img class=\'special-food\' src=\'../images/nuggets.jpg\'>\n\t  <div class=\'special-text\'>\n\t  \t<p class=\'special-item\'>' + specialMenuItem.item + '</p>\n\t  \t<p class=\'special-price\'>$' + specialMenuItem.price + '</p>\n\t  \t<p class=\'special-des\'>' + specialMenuItem.description + '</p>\n\t  </div>';
 
 		$('#daily-special').append(specialBlock);
 	});

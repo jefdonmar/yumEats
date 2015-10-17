@@ -137,10 +137,12 @@ menuPromise.then( function(obj){
   specialMenuItem = _.findWhere(arrMenu, {id: specialId });
 
   let specialBlock = `
-  <p>${ specialMenuItem.item }</p>
-  <p class='special-price'>${ specialMenuItem.price }</p>
-  <img class='special-food' src='../images/nuggets.jpg'>
-  <p>${ specialMenuItem.description }</p>`;
+	  <img class='special-food' src='../images/nuggets.jpg'>
+	  <div class='special-text'>
+	  	<p class='special-item'>${ specialMenuItem.item }</p>
+	  	<p class='special-price'>$${ specialMenuItem.price }</p>
+	  	<p class='special-des'>${ specialMenuItem.description }</p>
+	  </div>`;
 
   $('#daily-special').append(specialBlock);
 

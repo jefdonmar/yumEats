@@ -28,11 +28,10 @@
     </div>
 
     <div class='three-columns'>
-      <div class="glance" id='restaurant-pic'></div>
-      <div class="glance" id='latest-news'>Latest News<hr></div>
-      <div class="glance" id='daily-special'>Today's Special<hr></div>
+      <div class="glance" id='latest-news'><h3>Latest News</h3><hr></div>
+      <div class="glance" id='daily-special'><h3>Today's Special</h3><hr></div>
       <div class="glance" id='location'>
-        <span>Our Location</span><hr>
+        <h3>Our Location</h3><hr>
         <iframe width="345" height="150" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:EjA5MzMgV2VzdCBQZWFjaHRyZWUgU3QgTlcsIEF0bGFudGEsIEdBIDMwMzA5LCBVU0E&key=AIzaSyDhxw6TiEdV11CzzDCmhdGu9WpuNl90bBQ" allowfullscreen></iframe>
         <span>555.555.5555 &middot; 555.555.5555 &middot; Map &middot; Directions</span> 
       </div>
@@ -156,9 +155,9 @@
 
 
   <script type="text/template" id="blog-post">
-    <p><%= title %></p>
-    <p><%= date_published %></p>
-    <p><%= post %></p>
+    <p id="blogTitle"><%= title %></p>
+    <p id="blogDate"><%= date_published %></p>
+    <p id="blogPost"><%= post %></p>
   </script>
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
