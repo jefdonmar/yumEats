@@ -149,7 +149,7 @@ menuPromise.then( function(obj){
 
 // Flickr API to have images load on side (cori)
 
-let flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7fa7c03851023d00f1b9aa4e950a58ff&photoset_id=72157659986712021&user_id=135399936%40N08&format=json&nojsoncallback=1&auth_token=72157659569595939-ea511a72f79cdcb7&api_sig=209ceb6c4048eba63b23fa06e9a7a3c9';
+let flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6ba403d8e91a4b5aafeb28027c5a7542&photoset_id=72157659986712021&user_id=135399936%40N08&format=json&nojsoncallback=1&auth_token=72157659992342092-738c02df2d137139&api_sig=4ea4c9aaf148a9f45bfe5774a803c005';
 
 let flickrPromise = $.getJSON(flickrUrl);
 let photoInfo = {};

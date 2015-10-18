@@ -280,8 +280,7 @@ body{
 
     img {
       max-width: 100%;
-      height: 250px;
-      overflow: auto;
+      height: 248px;
       padding-top: 0;
     }
   }
@@ -347,7 +346,7 @@ body{
         display: none;
         width: 245px;
         height: 110px;
-        background-color: #0D3C1E;
+        background-color: gray;
         position: absolute;
         border-radius: 10px;
         right: 592px;
@@ -373,7 +372,7 @@ body{
         display: none;
         width: 245px;
         height: 110px;
-        background-color: #0D3C1E;
+        background-color: gray;
         position: absolute;
         border-radius: 10px;
         right: 574px;
@@ -401,7 +400,7 @@ body{
         display: none;
         width: 245px;
         height: 110px;
-        background-color: #0D3C1E;
+        background-color: gray;
         position: absolute;
         border-radius: 10px;
         right: 555px;
@@ -425,7 +424,7 @@ body{
         display: none;
         width: 245px;
         height: 110px;
-        background-color: #0D3C1E;
+        background-color: gray;
         position: absolute;
         border-radius: 10px;
         right: 538px;
@@ -538,6 +537,7 @@ img {
   padding-top: 15px;
   max-width: 95%;
   border: 1px solid $borderColor;
+  background-color: $apiColor;
 
 .reviewThreads {
   border-bottom: 1px solid $borderColor;
@@ -577,6 +577,7 @@ img {
   max-width: 95%;
   border: 1px solid $borderColor;
   margin-top: 40px;
+  background-color: $apiColor;
 
 .reviewThreads {
   border-bottom: 1px solid $borderColor;
@@ -617,6 +618,7 @@ img {
   max-width: 95%;
   border: 1px solid $borderColor;
   margin-top: 40px;
+  background-color: $apiColor;
 
 .reviewThreads {
   border-bottom: 1px solid $borderColor;
