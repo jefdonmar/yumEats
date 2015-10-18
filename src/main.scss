@@ -205,7 +205,7 @@ body{
     @include span-columns(12);
   
       #dynamicContainer {
-         @include span-columns(8);
+         @include span-columns(9);
          @include omega ();
 
          float: left;
@@ -225,6 +225,7 @@ body{
 
           .tabContainer p {
             border-bottom: 1px solid $borderColor;
+            margin-left: -5px;
             display: inline-block;
             padding: 10px;
             width: 20%;
@@ -249,19 +250,25 @@ body{
       }
 
    #foodPhotoContainer{
-    @include span-columns(4);
+    @include span-columns(3);
     @include omega();
     border: $borderColor;
     float: right;
    }
   
   .foodPhotos {
-    @include span-columns(4 of 4);
+    @include span-columns(3 of 3);
     @include omega(1n);
     border: 1px solid $borderColor;
-    height: 280px;
+    height: 250px;
     background-color: $apiColor;
     margin: 0 0 40px 0;
+
+    img {
+      max-width: 100%;
+      height: 250px;
+      overflow: auto;
+    }
   }
 
     

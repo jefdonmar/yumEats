@@ -136,7 +136,7 @@ body {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 65.88078%;
+      width: 74.41059%;
       margin-right: 0;
       float: left; }
       .container #main-body #dynamicContainer:last-child {
@@ -151,6 +151,7 @@ body {
           padding: 5px; }
         .container #main-body #dynamicContainer .tabWrapper .tabContainer p {
           border-bottom: 1px solid #B9B9B9;
+          margin-left: -5px;
           display: inline-block;
           padding: 10px;
           width: 20%; }
@@ -167,7 +168,7 @@ body {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%;
+      width: 23.23176%;
       margin-right: 0;
       border: #B9B9B9;
       float: right; }
@@ -176,10 +177,10 @@ body {
     .container #main-body .foodPhotos {
       float: left;
       display: block;
-      margin-right: 7.42297%;
+      margin-right: 10.1484%;
       width: 100%;
       border: 1px solid #B9B9B9;
-      height: 280px;
+      height: 250px;
       background-color: #EBEBEB;
       margin: 0 0 40px 0; }
       .container #main-body .foodPhotos:last-child {
@@ -188,6 +189,10 @@ body {
         margin-right: 0; }
       .container #main-body .foodPhotos:nth-child(1n+1) {
         clear: left; }
+      .container #main-body .foodPhotos img {
+        max-width: 100%;
+        height: 250px;
+        overflow: auto; }
 
 .menu {
   max-width: 700px; }
