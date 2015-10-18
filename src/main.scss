@@ -95,6 +95,7 @@ body{
           margin-top: 16px;
           font-size: 25px;
           color: #f99624;
+          cursor: pointer;
         }
       
     }
@@ -230,7 +231,7 @@ body{
           .tabs {
             display: inline-block;
             padding: 10px 15px;
-            cursor: pointer;
+            
           };
 
           .tabContainer{
@@ -243,6 +244,7 @@ body{
             display: inline-block;
             padding: 10px;
             width: 20%;
+            cursor: pointer;
 
             &.clicked {
               border-top: 1px solid $borderColor;
