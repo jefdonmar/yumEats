@@ -90,6 +90,7 @@
 //   <li class="brandico-allergy"></li>
 // </ul>
 
+//'Our Story' Section of Menu with Chef Pic
 
 .our-story {
   margin-left: 150px;
@@ -115,6 +116,9 @@
 img {
   width: 100%;
   padding-top: 10px;
+
+// 'Resevations' Section for Restaurant
+
 }
 .reservations {
   margin-left: 110px;
@@ -194,12 +198,126 @@ img {
   color: #00A16E;
 }
 
+// Review One Section Starts Here.
 
+.reviews {
+  list-style: none;
+  padding-top: 15px;
+  border: 0.2em solid black;
+  margin-left: 150px;
+  width: 700px;
 
+.reviewThreads {
+  border-bottom: 1px solid gray;
+  span {
+    margin-left: 40px;
+  }
+}
+.reviewBox1 img  {
+  display: inline-block;
+  width: 180px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+.reviewBox1 ul {
+  display: inline-block;
+ width: 60%;
+}
+.title1 {
+  list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+.description {
+  list-style: none;
+  font-size: 14px;
+}
+.recs-comms1 {
+  list-style: none;
+  margin-top: 50px;
+}
+}
+       // ReviewTwo starts here
 
+.reviewsTwo {
+  list-style: none;
+  padding-top: 15px;
+  border: 0.2em solid black;
+  margin-left: 150px;
+  width: 700px;
+  margin-top: 40px;
 
+.reviewThreads {
+  border-bottom: 1px solid gray;
+  span {
+    margin-left: 40px;
+  }
+}
+.reviewBox1 img  {
+  display: inline-block;
+  width: 180px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+.reviewBox1 ul {
+  display: inline-block;
+ width: 60%;
+}
+.title1 {
+  list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+.description {
+  list-style: none;
+  font-size: 14px;
+}
+.recs-comms1 {
+  list-style: none;
+  margin-top: 50px;
+}
+}
 
+// ReviewThree starts here!!
 
+.reviewsThree {
+  list-style: none;
+  padding-top: 15px;
+  border: 0.2em solid black;
+  margin-left: 150px;
+  width: 700px;
+  margin-top: 40px;
 
-
-
+.reviewThreads {
+  border-bottom: 1px solid gray;
+  span {
+    margin-left: 40px;
+  }
+}
+.reviewBox1 img  {
+  display: inline-block;
+  width: 180px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+.reviewBox1 ul {
+  display: inline-block;
+ width: 60%;
+}
+.title1 {
+  list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+.description {
+  list-style: none;
+  font-size: 14px;
+}
+.recs-comms1 {
+  list-style: none;
+  margin-top: 50px;
+}
+}

@@ -138,3 +138,95 @@ img {
   margin-left: 145px;
   font-family: 'Shadows Into Light', cursive;
   color: #00A16E; }
+
+.reviews {
+  list-style: none;
+  padding-top: 15px;
+  border: 0.2em solid black;
+  margin-left: 150px;
+  width: 700px; }
+  .reviews .reviewThreads {
+    border-bottom: 1px solid gray; }
+    .reviews .reviewThreads span {
+      margin-left: 40px; }
+  .reviews .reviewBox1 img {
+    display: inline-block;
+    width: 180px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 25px; }
+  .reviews .reviewBox1 ul {
+    display: inline-block;
+    width: 60%; }
+  .reviews .title1 {
+    list-style: none;
+    font-size: 22px;
+    font-weight: bold; }
+  .reviews .description {
+    list-style: none;
+    font-size: 14px; }
+  .reviews .recs-comms1 {
+    list-style: none;
+    margin-top: 50px; }
+
+.reviewsTwo {
+  list-style: none;
+  padding-top: 15px;
+  border: 0.2em solid black;
+  margin-left: 150px;
+  width: 700px;
+  margin-top: 40px; }
+  .reviewsTwo .reviewThreads {
+    border-bottom: 1px solid gray; }
+    .reviewsTwo .reviewThreads span {
+      margin-left: 40px; }
+  .reviewsTwo .reviewBox1 img {
+    display: inline-block;
+    width: 180px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 25px; }
+  .reviewsTwo .reviewBox1 ul {
+    display: inline-block;
+    width: 60%; }
+  .reviewsTwo .title1 {
+    list-style: none;
+    font-size: 22px;
+    font-weight: bold; }
+  .reviewsTwo .description {
+    list-style: none;
+    font-size: 14px; }
+  .reviewsTwo .recs-comms1 {
+    list-style: none;
+    margin-top: 50px; }
+
+.reviewsThree {
+  list-style: none;
+  padding-top: 15px;
+  border: 0.2em solid black;
+  margin-left: 150px;
+  width: 700px;
+  margin-top: 40px; }
+  .reviewsThree .reviewThreads {
+    border-bottom: 1px solid gray; }
+    .reviewsThree .reviewThreads span {
+      margin-left: 40px; }
+  .reviewsThree .reviewBox1 img {
+    display: inline-block;
+    width: 180px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 25px; }
+  .reviewsThree .reviewBox1 ul {
+    display: inline-block;
+    width: 60%; }
+  .reviewsThree .title1 {
+    list-style: none;
+    font-size: 22px;
+    font-weight: bold; }
+  .reviewsThree .description {
+    list-style: none;
+    font-size: 14px; }
+  .reviewsThree .recs-comms1 {
+    list-style: none;
+    margin-top: 50px; }
