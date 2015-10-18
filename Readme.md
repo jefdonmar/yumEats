@@ -1,10 +1,10 @@
 
 ## The Iron Yard: Group Projects_yumEats:
 
-Cori - https://github.com/corifowler
-Jeff - https://github.com/jefdonmar
-Isaac - https://github.com/IsaacHardy
-Amit - https://github.com/amitshah86
+* Cori - https://github.com/corifowler
+* Jeff - https://github.com/jefdonmar
+* Isaac - https://github.com/IsaacHardy
+* Amit - https://github.com/amitshah86
 
 #### We used three API's to create this site :
 
