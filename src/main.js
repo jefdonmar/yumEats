@@ -129,7 +129,6 @@ specialPromise.then( function(spObj){
 });
 
 menuPromise.then( function(obj){
-	console.log(obj);
   Object.keys(obj).forEach(function(key) {
     arrMenu = arrMenu.concat(obj[key]);
   });
@@ -148,8 +147,39 @@ menuPromise.then( function(obj){
 
 });
 
+// Flickr API to have images load on side (cori)
 
-// Tab JS Code (cori and jeff)
+let flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7fa7c03851023d00f1b9aa4e950a58ff&photoset_id=72157659986712021&user_id=135399936%40N08&format=json&nojsoncallback=1&auth_token=72157659569595939-ea511a72f79cdcb7&api_sig=209ceb6c4048eba63b23fa06e9a7a3c9';
+
+let flickrPromise = $.getJSON(flickrUrl);
+let photoInfo = {};
+
+let photoLink1;
+let photoLink2;
+let photoLink3;
+let photoLink4;
+
+flickrPromise.then( function(object){
+
+	photoInfo = object.photoset;
+
+	photoLink1 = 'https://farm' + photoInfo.photo[0].farm + '.staticflickr.com' + '/' + photoInfo.photo[0].server + '/' + photoInfo.photo[0].id + '_' + photoInfo.photo[0].secret + '_n.jpg';
+
+	photoLink2 = 'https://farm' + photoInfo.photo[1].farm + '.staticflickr.com' + '/' + photoInfo.photo[1].server + '/' + photoInfo.photo[1].id + '_' + photoInfo.photo[1].secret + '_n.jpg';
+
+	photoLink3 = 'https://farm' + photoInfo.photo[2].farm + '.staticflickr.com' + '/' + photoInfo.photo[2].server + '/' + photoInfo.photo[2].id + '_' + photoInfo.photo[2].secret + '_n.jpg';
+
+	photoLink4 = 'https://farm' + photoInfo.photo[3].farm + '.staticflickr.com' + '/' + photoInfo.photo[3].server + '/' + photoInfo.photo[3].id + '_' + photoInfo.photo[3].secret + '_n.jpg';
+
+	$('#foodPhoto1').attr('src', photoLink1);
+	$('#foodPhoto2').attr('src', photoLink2);
+	$('#foodPhoto3').attr('src', photoLink3);
+	$('#foodPhoto4').attr('src', photoLink4);
+
+});
+
+
+// Tab JS Code (cori)
 
 $('.tab1').on('click', function(){
 	$('.tab1').toggleClass('clicked');
