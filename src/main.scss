@@ -1,40 +1,14 @@
 
+$borderColor: #B9B9B9;
+$apiColor: #EBEBEB;
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
 //-------> Social Media Icon <----------------------
 
-// INSTAGRAM Icon
+// Icon info - clarify which in class name (see example below)
 @import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-// FACEBOOK Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//TWITTER Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//OPENTABLE icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//YELP icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//FLICKR icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-
-/* brandico */
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif;
 }
@@ -61,24 +35,6 @@
   font-family: 'brandico', sans-serif;
 }
 
-//Restaurant Favorite Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//Vegan Icon
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-//Allergy Info Icon 
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
 // <!-- how to do Single Element in HTML-->
 // <span class="brandico-spicy"></span>
 
@@ -92,27 +48,408 @@
 
 //'Our Story' Section of Menu with Chef Pic
 
-.our-story {
-  margin-left: 150px;
-  padding-top: 20px;
-  width: 670px;
-}
-.para1 {
-  font-size: 14px;
-  width: 100%;
-  line-height: 20px;
-  font-family: 'Walter Turncoat', cursive;
-  color: #0D3C1E;
+//-------> Today's Special, Blog and Location Styles <----------
+
+body{
+  width: 85%;
+  margin: 0 auto;
+  font-family: 'Gudea', sans-serif;
+
+  ul,li{
+    list-style: none;
+  }
 
 }
-.para2 {
+
+
+.container {
+  @include span-columns(12);
+
+  header{
+    border-bottom: 1px solid $borderColor;
+    height: 115px;
+    width: 100%;
+
+    
+    .logo{
+      // width: 300px;
+      // height: 80px;
+      display: inline-block;
+      float: left;
+      font-family: 'Lobster', cursive;
+      font-size: 40px;
+      margin-top: 16px;
+      color: #24A270;
+
+    }
+
+    .social-media-icons{
+      display: inline-block;
+      float: right;
+      padding: 5px;
+
+        ul li{
+          list-style: none;
+          display: inline-block;
+          padding: 10px;
+          margin-top: 16px;
+          font-size: 25px;
+          color: #f99624;
+        }
+      
+    }
+  }
+
+  #imgRow {
+    height: 350px;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+      #main-image{
+        width: 100%;
+        height: 350px;
+      }
+  }
+
+  .three-columns{
+    @include span-columns(12);
+    margin-bottom: 30px;
+
+    .glance {
+      @include span-columns(4);
+      border: 1px solid #B9B9B9;
+      background-color: $apiColor;
+      height: 300px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      hr {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      h3 {
+        font-size: 15px;
+        margin-left: 20px;
+        font-weight: bold;
+      }
+      p {
+        display: inline-block;
+        font-size: 12px;
+        margin: 10px 20px;
+      }
+      span {
+        font-size: 12px;
+        margin-left: 15%;
+      }
+      img, iframe {
+          width: 90%;
+          margin-left: 5%;
+          height: 180px;
+        }
+
+      #latest-news{
+        border: 1px solid $borderColor;   
+
+
+      }
+      p#blogTitle {
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      p#blogDate {
+        float: right;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      #blogPost {
+        font-size: 11px;
+        text-overflow: ellipsis;
+        overflow: auto;
+        padding: 3px; 
+        height: 190px;
+      }
+
+      #daily-special {
+        @include omega ();
+        border: 1px solid $borderColor;
+
+
+
+      }
+      .special-text{
+        margin-top: -12px;
+
+        .special-food {
+
+        }  
+        .special-price {
+          float: right;
+          font-size: 13px;
+          font-weight: bold;
+        }      
+        .special-des {
+          display: block;
+          font-size: 11px;
+        }
+          
+        
+        .special-item {
+          font-size: 14px;
+          font-weight: bold;
+        }
+    }
+      
+        
+      
+
+      #location {
+        border: 1px solid $borderColor;
+      }
+    }
+
+  }
+
+  #main-body{
+    @include outer-container;
+    @include span-columns(12);
+  
+      #dynamicContainer {
+         @include span-columns(9);
+         @include omega ();
+
+         float: left;
+
+         .tabWrapper {
+          width: 100%;
+
+          .tabs {
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+          };
+
+          .tabContainer{
+            padding: 5px;
+          }
+
+          .tabContainer p {
+            border-bottom: 1px solid $borderColor;
+            margin-left: -5px;
+            display: inline-block;
+            padding: 10px;
+            width: 20%;
+
+            &.clicked {
+              border-top: 1px solid $borderColor;
+              border-left: 1px solid $borderColor;
+              border-right: 1px solid $borderColor;
+              border-bottom: none;
+            }
+          }
+        }
+
+        .open {
+          display: block;
+        }
+
+        .close {
+            display: none;
+        }
+
+      }
+
+   #foodPhotoContainer{
+    @include span-columns(3);
+    @include omega();
+    border: $borderColor;
+    float: right;
+   }
+  
+  .foodPhotos {
+    @include span-columns(3 of 3);
+    @include omega(1n);
+    border: 1px solid $borderColor;
+    height: 250px;
+    background-color: $apiColor;
+    margin: 0 0 40px 0;
+
+    img {
+      max-width: 100%;
+      height: 250px;
+      overflow: auto;
+      padding-top: 0;
+    }
+  }
+
+    
+  }
+}
+
+// ------- Menu Section ------- //
+
+// Main body of menu
+.menu {
+  max-width: 700px; }
+  .menu h1 {
+    font-size: 24px;
+    border-bottom: 1px solid;
+    font-weight: 100; }
+  .menu .section {
+    font-size: 24px;
+    border-bottom: 1px solid;
+    margin-top: 50px; }
+  .menu .itemBlock {
+    width: 700px;
+    border: 1px dotted;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 15px; }
+    .menu .itemBlock .blockLeft {
+      display: inline-block; }
+      .menu .itemBlock .blockLeft .menuItem {
+        font-size: 16px;
+        display: inline-block; }
+      .menu .itemBlock .blockLeft .menuDes {
+        font-size: 12px; }
+    .menu .itemBlock .blockRight {
+      float: right;
+      display: inline-block;
+      text-align: right; }
+      .menu .itemBlock .blockRight .menuPrice {
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 28px; }
+      .menu .itemBlock .blockRight .priceCup {
+        margin: 0;
+        margin-top: -44px; }
+      .menu .itemBlock .blockRight .priceBowl {
+        margin: 0; }
+      .menu .itemBlock .blockRight .menuIcons:before {
+        content: '';
+        position: absolute;
+        margin-left: -10px;
+        margin-top: -4px;
+        background-color: black;
+        width: 1px;
+        height: 25px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle:hover .exclamationHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 592px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover p {
+          padding: 0px 16px; }
+          .menu .itemBlock .blockRight .menuIcons .fa-exclamation-circle .exclamationHover p a {
+            text-decloration: none; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star:hover .starHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-star .starHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 574px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-star .starHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-star .starHover button {
+          color: #0D3C1E;
+          padding: 14px;
+          border-radius: 10px;
+          border: none;
+          background-color: #fff; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire:hover .fireHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 555px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+        .menu .itemBlock .blockRight .menuIcons .fa-fire .fireHover p a {
+          text-decloration: none; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo:hover {
+        border: 1px solid;
+        padding: 2px;
+        border-radius: 5px; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo:hover .vimeoHover {
+        display: block; }
+      .menu .itemBlock .blockRight .menuIcons .fa-vimeo .vimeoHover {
+        display: none;
+        width: 245px;
+        height: 110px;
+        background-color: #0D3C1E;
+        position: absolute;
+        border-radius: 10px;
+        right: 538px;
+        margin-top: 2px;
+        color: #fff;
+        text-align: center;
+        z-index: 1000; }
+        .menu .itemBlock .blockRight .menuIcons .fa-vimeo .vimeoHover h2 {
+          border-bottom: 1px dotted #fff;
+          padding: 5px 0px;
+          margin: 10px 20px; }
+
+
+// ------- End Menu Section -------//
+
+// Our Story and Reservation Sections from Amit
+
+.para {
   font-size: 14px;
   width: 100%;
   line-height: 20px;
-  padding-top: 10px;
-  font-family: 'Walter Turncoat', cursive;
-  color: #0D3C1E;
+  margin: 0;
 }
+
 img {
   width: 100%;
   padding-top: 10px;
@@ -121,81 +458,77 @@ img {
 
 }
 .reservations {
-  margin-left: 110px;
+  padding-bottom: 10px;
+  font-weight: bold;
 }
-
+.reservations ul {
+  padding-left: 5px;
+}
 .reservations ul li {
   list-style: none;
   font-size: 16px;
+
 }
 .reservationsTab {
   font-weight: bold;
 }
-.fullName {
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
-}
 .blankSpace1 {
-  background-color: gray;
   color: black;
   width: 300px;
   height: 30px;
   margin-top: 15px;
+  border-radius: 3px;
+  border: 1px solid $borderColor;
 }
 .numberofGuests {
   padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
 }
 .blankSpace2 {
-  background-color: gray;
   color: black;
   width: 100px;
   height: 30px;
   margin-top: 15px;
+  border-radius: 3px;
+  border: 1px solid $borderColor;
 }
 .date {
   padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
 }
 .blankSpace3 {
-  background-color: gray;
   color: black;
   width: 100px;
   height: 30px;
   margin-top: 15px;
+  border-radius: 3px;
+  border: 1px solid $borderColor;
 }
 .specialNotes {
   padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
 }
 .blankSpace4 {
-  background-color: gray;
   color: black;
   width: 400px;
   height: 80px;
   margin-top: 15px;
+  border-radius: 3px;
+  border: 1px solid $borderColor;
 }
-.seatingPreferance {
+.seatingPreference {
   padding-top: 20px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
 }
 .seatingOption  {
   margin-top: 10px;
   width: 105px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
+  border-radius: 3px;
+  border: 1px solid $borderColor;
 }
 .reserveButton {
-  background-color: black;
+  background-color: white;
   width: 150px;
-  height: 50px;
-  margin-left: 145px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #00A16E;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 1px solid $borderColor;
 }
 
 // Review One Section Starts Here.
@@ -203,16 +536,13 @@ img {
 .reviews {
   list-style: none;
   padding-top: 15px;
-  border: 0.2em solid black;
-  margin-left: 150px;
-  width: 700px;
+  max-width: 95%;
+  border: 1px solid $borderColor;
 
 .reviewThreads {
-  border-bottom: 1px solid gray;
-  span {
-    margin-left: 40px;
-  }
-}
+  border-bottom: 1px solid $borderColor;
+  padding-left: 5px;
+}  
 .reviewBox1 img  {
   display: inline-block;
   width: 180px;
@@ -222,8 +552,9 @@ img {
 }
 .reviewBox1 ul {
   display: inline-block;
- width: 60%;
-}
+  width: 60%;
+  padding-left: 5px;
+}  
 .title1 {
   list-style: none;
   font-size: 22px;
@@ -243,16 +574,13 @@ img {
 .reviewsTwo {
   list-style: none;
   padding-top: 15px;
-  border: 0.2em solid black;
-  margin-left: 150px;
-  width: 700px;
+  max-width: 95%;
+  border: 1px solid $borderColor;
   margin-top: 40px;
 
 .reviewThreads {
-  border-bottom: 1px solid gray;
-  span {
-    margin-left: 40px;
-  }
+  border-bottom: 1px solid $borderColor;
+  padding-left: 5px;
 }
 .reviewBox1 img  {
   display: inline-block;
@@ -263,7 +591,8 @@ img {
 }
 .reviewBox1 ul {
   display: inline-block;
- width: 60%;
+  width: 60%;
+  padding-left: 5px;
 }
 .title1 {
   list-style: none;
@@ -285,16 +614,13 @@ img {
 .reviewsThree {
   list-style: none;
   padding-top: 15px;
-  border: 0.2em solid black;
-  margin-left: 150px;
-  width: 700px;
+  max-width: 95%;
+  border: 1px solid $borderColor;
   margin-top: 40px;
 
 .reviewThreads {
-  border-bottom: 1px solid gray;
-  span {
-    margin-left: 40px;
-  }
+  border-bottom: 1px solid $borderColor;
+  padding-left: 5px;
 }
 .reviewBox1 img  {
   display: inline-block;
@@ -305,7 +631,8 @@ img {
 }
 .reviewBox1 ul {
   display: inline-block;
- width: 60%;
+  width: 60%;
+  padding-left: 5px;
 }
 .title1 {
   list-style: none;
@@ -320,4 +647,8 @@ img {
   list-style: none;
   margin-top: 50px;
 }
+}
+
+footer {
+  color: #f99624;
 }

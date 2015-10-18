@@ -1,33 +1,7 @@
 (function () {
-
-
-// Blog JS Code for "Latest News" section
-
-let blogUrl = 'https://json-data.herokuapp.com/restaurant/news/1';
-
-let blogTemplate = _.template($('#blog-post').text());
-
-let blogPromise = $.getJSON(blogUrl);
-
-blogPromise.then( function(postInfo) {
-  let blogInfo = blogTemplate(postInfo);
-  $('.latest-news').append(blogInfo);
-});
-
-// Special JS Code for "Daily Special" section
-
-let specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
-let specialTemplate = _.template($('#specials').text());
-
-let specialPromise = $.getJSON(specialUrl);
-let menuPromise = $.getJSON(menuUrl);
-
-
-Promise.all([specialPromise, menuPromise]).then(function(object){
-
-});
-
+/////////////////////////////////////////////////////////////
 // ----------------- Isaac javaScript -------------------- //
+/////////////////////////////////////////////////////////////
 	
 	// Var set to our URL and the URL for our getJSON method
 	let menuUrl = "https://json-data.herokuapp.com/restaurant/menu/2";
@@ -41,8 +15,6 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 	// Function that determines what will be display to the HTML
 	let createTemplate = function(arr) {
 
-
-
 	// Var to add content
 	let menuBlock = '';
 	let prices = '';
@@ -52,14 +24,14 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 		
 		if (option.price.cup) {
 			prices =`
-			<p>${ option.price.cup }</p>
-			<p>${ option.price.bowl }</p>`;
+			<p class="priceCup">cup:$${ option.price.cup } </p>
+			<p class="priceBowl">bowl:$${ option.price.bowl }</p>`;
 		} else if (option.price.small) {
 			prices =`
-			<p>${ option.price.small }</p>
-			<p>${ option.price.large }</p>`;
+			<p class="priceSmall">sm:$${ option.price.small } </p>
+			<p class="priceLarge">lg:$${ option.price.large }</p>`;
 		} else {
-			prices = `<p>${ option.price }</p>`;
+			prices = `$${ option.price }`;
 		}
 
 	});
@@ -68,11 +40,23 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 	// For each statement to add to menuBlock var
 	arr.forEach(function(option) {
 			menuBlock += `
-			<h2>${ option.item }</h2>
-			<p>${ option.description }</p>
-			<p>${ prices }</p>`;
-
-			console.log(menuBlock);
+			<div class="itemBlock">
+				<div class="blockLeft">
+					<h2 class="menuItem">${ option.item }</h2>
+					<p class="menuDes">~ ${ option.description }</p>
+				</div>
+				<div class="blockRight">
+					<p class="menuPrice">${ prices }</p>
+					<div class="menuIcons">
+					  <i class="fa fa-exclamation-circle"><div class="exclamationHover"><h2>Food Allergies</h2><p>Click <a href="#">HERE</a> for the list of ingredients.</p></div></i>
+					  <i class="fa fa-star"><div class="starHover"><h2>Favorite</h2><button href="#">Add to Favorites</button></div></i>
+					  <i class="fa fa-fire"><div class="fireHover"><h2>Spicy</h2><p>Click <a href="#">HERE</a> for spice level!</p></div></i>
+					  <i class="fa fa-vimeo"><div class="vimeoHover"><h2>Vegan</h2><p>Eat more bacon...Seriously.</p></div></i>
+					</div>
+				</div>
+				
+				
+			</div>`;
 	});
 
 	// Returnable var
@@ -111,10 +95,147 @@ Promise.all([specialPromise, menuPromise]).then(function(object){
 
 	}; 
 
+/////////////////////////////////////////////////////////////
+// ----------------- Cori's javaScript ------------------- //
+/////////////////////////////////////////////////////////////
+
+// Blog JS Code for "Latest News" section
+
+let blogUrl = 'https://json-data.herokuapp.com/restaurant/news/1';
+
+let blogTemplate = _.template($('#blog-post').text());
+
+let blogPromise = $.getJSON(blogUrl);
+
+blogPromise.then( function(postInfo) {
+  let blogInfo = blogTemplate(postInfo);
+  $('#latest-news').append(blogInfo);
+});
+
+// Special JS Code for "Daily Special" section
+
+let specialUrl = 'https://json-data.herokuapp.com/restaurant/special/1';
+
+let specialPromise = $.getJSON(specialUrl);
+let menuPromise = $.getJSON(menuUrl);
+
+let arrMenu = [];
+let specialId;
+let specialMenuItem = {};
+
+specialPromise.then( function(spObj){
+  specialId = spObj.menu_item_id;
+  return specialId;
+});
+
+menuPromise.then( function(obj){
+  Object.keys(obj).forEach(function(key) {
+    arrMenu = arrMenu.concat(obj[key]);
+  });
+
+  specialMenuItem = _.findWhere(arrMenu, {id: specialId });
+
+  let specialBlock = `
+	  <img class='special-food' src='../images/nuggets.jpg'>
+	  <div class='special-text'>
+	  	<p class='special-item'>${ specialMenuItem.item }</p>
+	  	<p class='special-price'>$${ specialMenuItem.price }</p>
+	  	<p class='special-des'>${ specialMenuItem.description }</p>
+	  </div>`;
+
+  $('#daily-special').append(specialBlock);
+
+});
+
+// Flickr API to have images load on side (cori)
+
+let flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7fa7c03851023d00f1b9aa4e950a58ff&photoset_id=72157659986712021&user_id=135399936%40N08&format=json&nojsoncallback=1&auth_token=72157659569595939-ea511a72f79cdcb7&api_sig=209ceb6c4048eba63b23fa06e9a7a3c9';
+
+let flickrPromise = $.getJSON(flickrUrl);
+let photoInfo = {};
+
+let photoLink1;
+let photoLink2;
+let photoLink3;
+let photoLink4;
+
+flickrPromise.then( function(object){
+
+	photoInfo = object.photoset;
+
+	console.log(photoInfo);
+
+	photoLink1 = 'https://farm' + photoInfo.photo[0].farm + '.staticflickr.com' + '/' + photoInfo.photo[0].server + '/' + photoInfo.photo[0].id + '_' + photoInfo.photo[0].secret + '_n.jpg';
+
+	photoLink2 = 'https://farm' + photoInfo.photo[1].farm + '.staticflickr.com' + '/' + photoInfo.photo[1].server + '/' + photoInfo.photo[1].id + '_' + photoInfo.photo[1].secret + '_n.jpg';
+
+	photoLink3 = 'https://farm' + photoInfo.photo[2].farm + '.staticflickr.com' + '/' + photoInfo.photo[2].server + '/' + photoInfo.photo[2].id + '_' + photoInfo.photo[2].secret + '_n.jpg';
+
+	photoLink4 = 'https://farm' + photoInfo.photo[3].farm + '.staticflickr.com' + '/' + photoInfo.photo[3].server + '/' + photoInfo.photo[3].id + '_' + photoInfo.photo[3].secret + '_n.jpg';
+
+	$('#foodPhoto1').attr('src', photoLink1);
+	$('#foodPhoto2').attr('src', photoLink2);
+	$('#foodPhoto3').attr('src', photoLink3);
+	$('#foodPhoto4').attr('src', photoLink4);
+
+});
 
 
+// Tab JS Code (cori)
 
+$('.tab1').on('click', function(){
+	$('.tab1').toggleClass('clicked');
+	$('.tab2').removeClass('clicked');
+	$('.tab3').removeClass('clicked');
+	$('.tab4').removeClass('clicked');
+	$('.tabLink1').removeClass('close').addClass('open');
+	$('.tabLink2').removeClass('open').addClass('close');
+	$('.tabLink3').removeClass('open').addClass('close');
+	$('.tabLink4').removeClass('open').addClass('close');
+});
+
+$('.tab2').on('click', function(){
+	$('.tab2').toggleClass('clicked');
+	$('.tab1').removeClass('clicked');
+	$('.tab3').removeClass('clicked');
+	$('.tab4').removeClass('clicked');
+	$('.tabLink2').removeClass('close').addClass('open');
+	$('.tabLink1').removeClass('open').addClass('close');
+	$('.tabLink3').removeClass('open').addClass('close');
+	$('.tabLink4').removeClass('open').addClass('close');
+});
+
+$('.tab3').on('click', function(){
+	$('.tab3').toggleClass('clicked');
+	$('.tab1').removeClass('clicked');
+	$('.tab2').removeClass('clicked');
+	$('.tab4').removeClass('clicked');
+	$('.tabLink3').removeClass('close').addClass('open');
+	$('.tabLink1').removeClass('open').addClass('close');
+	$('.tabLink2').removeClass('open').addClass('close');
+	$('.tabLink4').removeClass('open').addClass('close');
+});
+
+$('.tab4').on('click', function(){
+	$('.tab4').toggleClass('clicked');
+	$('.tab1').removeClass('clicked');
+	$('.tab2').removeClass('clicked');
+	$('.tab3').removeClass('clicked');
+	$('.tabLink4').removeClass('close').addClass('open');
+	$('.tabLink2').removeClass('open').addClass('close');
+	$('.tabLink3').removeClass('open').addClass('close');
+	$('.tabLink1').removeClass('open').addClass('close');
+});
 
 }());
+
+
+
+
+
+
+
+
+
 
 
