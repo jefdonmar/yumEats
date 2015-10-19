@@ -118,7 +118,7 @@
 
 	// Flickr API to have images load on side (cori)
 
-	var flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6ba403d8e91a4b5aafeb28027c5a7542&photoset_id=72157659986712021&user_id=135399936%40N08&format=json&nojsoncallback=1&auth_token=72157659992342092-738c02df2d137139&api_sig=4ea4c9aaf148a9f45bfe5774a803c005';
+	var flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=4bd679b57a6386062946cea6a784cff7&photoset_id=72157659986712021&user_id=135399936%40N08&media=&format=json&nojsoncallback=1&auth_token=72157657729981143-fa6ce4429fe20b20&api_sig=3b0b72b25e076923b884a5d165e4eece';
 
 	var flickrPromise = $.getJSON(flickrUrl);
 	var photoInfo = {};
