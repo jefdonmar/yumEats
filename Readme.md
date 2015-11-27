@@ -21,3 +21,7 @@ This project is fictional. There is no real client. Any similarity is purely a c
 1. To make our logo we used a free sample logo from tailorbrands.com 
 2. We used the http://weloveiconfonts.com/ to get all of our hover icons and effects
 3. We also used the neat and bourbon app tools to styles our page a bit more 
+
+Here is a link to our deployment : 
+
+Hope you enjoy!
