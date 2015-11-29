@@ -22,6 +22,6 @@ This project is fictional. There is no real client. Any similarity is purely a c
 2. We used the http://weloveiconfonts.com/ to get all of our hover icons and effects
 3. We also used the neat and bourbon app tools to styles our page a bit more 
 
-Here is a link to our deployment : 
+Here is a link to our deployment : http://slimy-humor.surge.sh/
 
 Hope you enjoy!
