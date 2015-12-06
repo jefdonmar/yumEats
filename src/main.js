@@ -136,7 +136,7 @@ menuPromise.then( function(obj){
   specialMenuItem = _.findWhere(arrMenu, {id: specialId });
 
   let specialBlock = `
-	  <img class='special-food' src='../images/nuggets.jpg'>
+	  <img class='special-food' src='./images/nuggets.jpg'>
 	  <div class='special-text'>
 	  	<p class='special-item'>${ specialMenuItem.item }</p>
 	  	<p class='special-price'>$${ specialMenuItem.price }</p>
@@ -147,38 +147,41 @@ menuPromise.then( function(obj){
 
 });
 
+/////////////////////////////////////////////////////
+///// Expired API acess code ////////////////////////
+/////////////////////////////////////////////////////
 // Flickr API to have images load on side (cori)
 
-let flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=4bd679b57a6386062946cea6a784cff7&photoset_id=72157659986712021&user_id=135399936%40N08&media=&format=json&nojsoncallback=1&auth_token=72157657729981143-fa6ce4429fe20b20&api_sig=3b0b72b25e076923b884a5d165e4eece';
+// let flickrUrl = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=4bd679b57a6386062946cea6a784cff7&photoset_id=72157659986712021&user_id=135399936%40N08&media=&format=json&nojsoncallback=1&auth_token=72157657729981143-fa6ce4429fe20b20&api_sig=3b0b72b25e076923b884a5d165e4eece';
 
-let flickrPromise = $.getJSON(flickrUrl);
-let photoInfo = {};
+// let flickrPromise = $.getJSON(flickrUrl);
+// let photoInfo = {};
 
-let photoLink1;
-let photoLink2;
-let photoLink3;
-let photoLink4;
+// let photoLink1;
+// let photoLink2;
+// let photoLink3;
+// let photoLink4;
 
-flickrPromise.then( function(object){
+// flickrPromise.then( function(object){
 
-	photoInfo = object.photoset;
+// 	photoInfo = object.photoset;
 
-	console.log(photoInfo);
+// 	console.log(photoInfo);
 
-	photoLink1 = 'https://farm' + photoInfo.photo[0].farm + '.staticflickr.com' + '/' + photoInfo.photo[0].server + '/' + photoInfo.photo[0].id + '_' + photoInfo.photo[0].secret + '_n.jpg';
+// 	photoLink1 = 'https://farm' + photoInfo.photo[0].farm + '.staticflickr.com' + '/' + photoInfo.photo[0].server + '/' + photoInfo.photo[0].id + '_' + photoInfo.photo[0].secret + '_n.jpg';
 
-	photoLink2 = 'https://farm' + photoInfo.photo[1].farm + '.staticflickr.com' + '/' + photoInfo.photo[1].server + '/' + photoInfo.photo[1].id + '_' + photoInfo.photo[1].secret + '_n.jpg';
+// 	photoLink2 = 'https://farm' + photoInfo.photo[1].farm + '.staticflickr.com' + '/' + photoInfo.photo[1].server + '/' + photoInfo.photo[1].id + '_' + photoInfo.photo[1].secret + '_n.jpg';
 
-	photoLink3 = 'https://farm' + photoInfo.photo[2].farm + '.staticflickr.com' + '/' + photoInfo.photo[2].server + '/' + photoInfo.photo[2].id + '_' + photoInfo.photo[2].secret + '_n.jpg';
+// 	photoLink3 = 'https://farm' + photoInfo.photo[2].farm + '.staticflickr.com' + '/' + photoInfo.photo[2].server + '/' + photoInfo.photo[2].id + '_' + photoInfo.photo[2].secret + '_n.jpg';
 
-	photoLink4 = 'https://farm' + photoInfo.photo[3].farm + '.staticflickr.com' + '/' + photoInfo.photo[3].server + '/' + photoInfo.photo[3].id + '_' + photoInfo.photo[3].secret + '_n.jpg';
+// 	photoLink4 = 'https://farm' + photoInfo.photo[3].farm + '.staticflickr.com' + '/' + photoInfo.photo[3].server + '/' + photoInfo.photo[3].id + '_' + photoInfo.photo[3].secret + '_n.jpg';
 
-	$('#foodPhoto1').attr('src', photoLink1);
-	$('#foodPhoto2').attr('src', photoLink2);
-	$('#foodPhoto3').attr('src', photoLink3);
-	$('#foodPhoto4').attr('src', photoLink4);
+// 	$('#foodPhoto1').attr('src', photoLink1);
+// 	$('#foodPhoto2').attr('src', photoLink2);
+// 	$('#foodPhoto3').attr('src', photoLink3);
+// 	$('#foodPhoto4').attr('src', photoLink4);
 
-});
+// });
 
 
 // Tab JS Code (cori)
